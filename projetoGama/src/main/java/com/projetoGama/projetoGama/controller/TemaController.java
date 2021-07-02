@@ -28,15 +28,21 @@ public class TemaController {
 	@GetMapping
 	public ResponseEntity<List<Tema>> GetAll(){
 		return ResponseEntity.ok(repository.findAll());
-		
-	}
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<Tema> GetById(@PathVariable long id){
-		return repository.findById(id)
-				.map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
+		
+	}	// teste de If else para busca de ID
+	@GetMapping("idifelse/{id}")
+	public ResponseEntity<Tema> getByIdIfElse(@PathVariable long id) {
+
+		Optional<Tema> tema = TemaRepository.findById(id);
+		if (postagem.isPresent()) {
+			return ResponseEntity.ok(tema.get());
+		}
+		return ResponseEntity.notFound().build();
 	}
+		
+		
+
 	
 	@GetMapping("/categoria/{categoria}")
 	public ResponseEntity<List<Tema>> GetByTitulo(@PathVariable String categoria){
