@@ -35,8 +35,8 @@ public class TemaController {
 	@GetMapping("idifelse/{id}")
 	public ResponseEntity<Tema> getByIdIfElse(@PathVariable long id) {
 
-		Optional<Tema> tema = TemaRepository.findById(id);
-		if (Tema.isPresent()) {
+		Optional<Tema> tema = repository.findById(id);
+		if (tema.isPresent()) {
 			return ResponseEntity.ok(tema.get());
 		}
 		return ResponseEntity.notFound().build();
