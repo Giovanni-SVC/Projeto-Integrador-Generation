@@ -1,6 +1,7 @@
 package com.projetoGama.projetoGama.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,7 +36,7 @@ public class TemaController {
 	public ResponseEntity<Tema> getByIdIfElse(@PathVariable long id) {
 
 		Optional<Tema> tema = TemaRepository.findById(id);
-		if (postagem.isPresent()) {
+		if (Tema.isPresent()) {
 			return ResponseEntity.ok(tema.get());
 		}
 		return ResponseEntity.notFound().build();
