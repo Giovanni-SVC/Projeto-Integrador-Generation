@@ -11,5 +11,7 @@ import com.projetoGama.projetoGama.model.Tema;
 public interface TemaRepository extends JpaRepository<Tema, Long> {
 	
 	public List<Tema> findAllByCategoriaContainingIgnoreCase (String categoria);
+	//tags
+	public List<Tema> findAllByPalavraChaveContainingIgnoreCase (String palavrachave);
 
 }

@@ -27,7 +27,7 @@ public class Postagem {
 	
 	private String anexo;
 	
-	@Size(min=10, max=100)
+	@Size(min=10, max=255)
 	private String corpoTexto;
 	
 	private String vagas;

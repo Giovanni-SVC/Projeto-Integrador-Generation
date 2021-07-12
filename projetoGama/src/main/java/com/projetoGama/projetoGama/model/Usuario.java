@@ -11,7 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.br.CNPJ;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -25,6 +28,7 @@ public class Usuario {
 	private long id;
 	
 	@NotNull
+	//@Size(min = 2, max = 100)
 	private String nomeCompleto;
 	
 	private String cep;
@@ -33,21 +37,22 @@ public class Usuario {
 	
 	private String rne;
 	
-	@NotNull
-	private String email;
-	
+	//@Size(min = 13, max = 15)
 	private String telefone;
 	
 	@NotNull
+	@Email
 	private String login;
 	
 	@NotNull
+	//@Size(min = 8);
 	private String senha;
 	
 	private boolean empregador;
 	
 	private String nomeEmpresa;
 	
+	@CNPJ
 	private String cnpj;
 	
 	private String endereco;
@@ -57,10 +62,9 @@ public class Usuario {
     private LocalDate dataNascimento; // Atributo adicional
 	
 	
-	public Usuario() {
-		
-	}
-
+	public Usuario() {}
+	
+	//Todos os atributos?
 	public Usuario(long id, String nomeCompleto, String login, String senha, LocalDate dataNascimento) {
 		this.id = id;
 		this.nomeCompleto = nomeCompleto;
@@ -76,8 +80,9 @@ public class Usuario {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
-	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+	
+	// remove: para que todas as postagens sejam excluidas junto com o usuario 
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 
@@ -127,14 +132,6 @@ public class Usuario {
 
 	public void setRne(String rne) {
 		this.rne = rne;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getTelefone() {

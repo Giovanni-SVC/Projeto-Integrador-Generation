@@ -43,6 +43,12 @@ public class TemaController {
 		return ResponseEntity.ok(repository.findAllByCategoriaContainingIgnoreCase(categoria));
 	}
 	
+	//filtra por tags
+	@GetMapping("/palavrachave/{palavrachave}")
+	public ResponseEntity<List<Tema>> GetByTags(@PathVariable String palavrachave){
+		return ResponseEntity.ok(repository.findAllByPalavraChaveContainingIgnoreCase(palavrachave));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Tema> post ( @RequestBody Tema tema){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tema));	
