@@ -73,13 +73,13 @@ public Optional<Usuario> cadastrarUsuario(Usuario usuario) {
 	public Optional<UserLogin> Logar(Optional<UserLogin> userLogin) {
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		Optional<Usuario> usuario = usuarioRepository.findByLogin(userLogin.get().getUsuario());
+		Optional<Usuario> usuario = usuarioRepository.findByLogin(userLogin.get().getLogin());
 
 		if (usuario.isPresent()) {
 			
 			if (encoder.matches(userLogin.get().getSenha(), usuario.get().getSenha())) {
 
-				String auth = userLogin.get().getUsuario() + ":" + userLogin.get().getSenha();
+				String auth = userLogin.get().getLogin() + ":" + userLogin.get().getSenha();
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic " + new String(encodedAuth);
 
