@@ -1,498 +1,502 @@
 {
 	"info": {
-		"_postman_id": "e6675565-9f29-453e-b8cc-8d8f8b88163f",
-		"name": "ProjetoGama",
+		"_postman_id": "ca787d5c-31de-4fee-a8f1-c83dbc012a0e",
+		"name": "projetoGama",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CadastrarUsuarios",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"nomeCompleto\": \"\",\r\n    \"login\": \"\",\r\n    \"senha\": \"\",\r\n    \"dataNascimento\": \"\",\r\n    \"rne\": \"\",\r\n    \"numeroCasa\": \"\",\r\n    \"nomeEmpresa\": \"\",\r\n    \"cep\": \"\",\r\n    \"endereco\": \"\",\r\n    \"telefone\": \"\",\r\n    \"empregador\": true,\r\n    \"cnpj\": \"88.899.377/0001-75\"\r\n}\r\n/*\r\nid já existente para atualização\r\n/@provedor.com\r\nidade maior de 16 formato yyyy-mm-dd\r\n -- não obrigatório para teste\r\n    rne\r\n    numeroCasa\r\n    nomeEmpresa\r\n    endereco\r\n    telefone\r\n    empregador\r\n    cnpj\r\nboolean\r\ncnpj precisa ser válido\r\nHeaders --> Key: Authorization Value: Token\r\nNão pode haver duplicidade de login\r\n*/",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Get Usuários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXN1YXJpb0BlbWFpbC5jb20uYnI6c2VuaGExMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuarios/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuarios",
+								"all"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/usuarios/cadastrar",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"usuarios",
-						"cadastrar"
-					]
+				{
+					"name": "Logar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"usuario@email.com.br\",\r\n    \"senha\": \"senha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuarios/logar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuarios",
+								"logar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"nomeCompleto\": \"Tazo Paratazo\",\r\n    \"cep\": \"08080-650\",\r\n    \"numeroCasa\": \"10\",\r\n    \"rne\": \"ABCD1234\",\r\n    \"telefone\": \"1191234-5678\",\r\n    \"login\": \"usuario@email.com.br\",\r\n    \"senha\": \"senha123\",\r\n    \"empregador\" : false,\r\n    \"endereco\": \"Rua Generation - Fradique Coutinho, São Paulo - SP\",\r\n    \"dataNascimento\": \"1998-07-27\"\r\n    \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuarios/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuarios",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXN1YXJpb0BlbWFpbC5jb20uYnI6c2VuaGExMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"nomeCompleto\": \"Giovanni Cerqueira\",\r\n    \"cep\": \"08080-650\",\r\n    \"numeroCasa\": \"19\",\r\n    \"rne\": \"ABCDE1235\",\r\n    \"telefone\": \"1191234-5678\",\r\n    \"login\": \"usuario@email.com.br\",\r\n    \"senha\": \"senha123\",\r\n    \"empregador\" : false,\r\n    \"endereco\": \"Rua Generation - Fradique Coutinho, São Paulo - SP\",\r\n    \"dataNascimento\": \"1999-07-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/usuarios/alterar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuarios",
+								"alterar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8091/usuarios/deletar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"usuarios",
+								"deletar"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Logar",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"usuario\": \"\",\r\n\"senha\": \"\",\r\n\"dataNascimento\": \"\"\r\n}\r\n//login\r\n// copiar token no Response ",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Tema",
+			"item": [
+				{
+					"name": "Criar Tema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoria\": \"Estágios\",\r\n    \"descricao\": \"Vagas de Estágios para Desenvolvedores\",\r\n    \"palavraChave\": \"back-end, vaga, estágio, front-end, TI, tecnologia\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tema",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tema"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/usuarios/logar",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"usuarios",
-						"logar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Atualizar Usuario",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\": , \r\n    \"nomeCompleto\": \"\",\r\n    \"login\": \"\",\r\n    \"senha\": \"\",\r\n    \"dataNascimento\": \"\",\r\n    \"rne\": \"\",\r\n    \"numeroCasa\": \"\",\r\n    \"nomeEmpresa\": \"\",\r\n    \"endereco\": \"\",\r\n    \"telefone\": \"\",\r\n    \"empregador\": true,\r\n    \"cnpj\": \"88.899.377/0001-75\"\r\n}\r\n/*\r\nid já existente para atualização\r\n/@provedor.com\r\nidade maior de 16 formato yyyy-mm-dd\r\n -- não obrigatório para teste\r\n    rne\r\n    numeroCasa\r\n    nomeEmpresa\r\n    endereco\r\n    telefone\r\n    empregador\r\n    cnpj\r\nboolean\r\ncnpj precisa ser válido\r\nHeaders --> Key: Authorization Value: Token\r\n*/",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Get Temas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXN1YXJpb0BlbWFpbC5jb20uYnI6c2VuaGExMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/tema/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tema",
+								""
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/usuarios/alterar",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"usuarios",
-						"alterar"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Mostrar Usuarios",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//Headers --> Key: Authorization Value: Token\r\n//mostrar todos os usuarios cadastrados",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Get By Titulo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/tema/nomecategoria/nomeespecifico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tema",
+								"nomecategoria",
+								"nomeespecifico"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/usuarios/all",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"usuarios",
-						"all"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Cadastrar Tema",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n        \"categoria\": \"\",\r\n        \"descricao\": \"\",\r\n        \"palavraChave\": \"\"\r\n     \r\n}\r\n//Headers --> Key: Authorization Value: Token\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Get by Tags",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/palavrachave/palavrachaveespecifica",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"palavrachave",
+								"palavrachaveespecifica"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/tema",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"tema"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Alterar Tema",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1,\r\n        \"categoria\": \"\",\r\n        \"descricao\": \"\",\r\n        \"palavraChave\": \"\"\r\n}\r\n//Headers --> Key: Authorization Value: Token\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Alterar Tema",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/tema/ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tema",
+								"ID"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/tema",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"tema"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Mostrar temas",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//Headers --> Key: Authorization Value: Token\r\n//mostrar  temas",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Deletar Tema By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/tema/ID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"tema",
+								"ID"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/tema",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"tema"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Mostrar tags",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//Headers --> Key: Authorization Value: Token\r\n//procurar por palavras chaves",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/tema/palavrachave/a",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"tema",
-						"palavrachave",
-						"a"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Excluir tema",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//adicionar id no caminho http\r\n//Headers --> Key: Authorization Value: Token",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/tema/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"tema",
-						"1"
-					]
-				}
-			},
-			"response": []
+			]
 		},
 		{
 			"name": "Postagem",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"anexo\": \"\",\r\n    \"corpoTexto\": \"\",\r\n    \"vagas\": \"\"\r\n\r\n}\r\n//Corpo de Texto no minimo de 10 caracteres\r\n//Headers --> Key: Authorization Value: Token",
-					"options": {
-						"raw": {
-							"language": "json"
+			"item": [
+				{
+					"name": "Criar Postagem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXN1YXJpb0BlbWFpbC5jb20uYnI6c2VuaGExMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anexo\": \"Link para currículo aqui\",\r\n    \"corpoTexto\": \"Esta é a minha publicação sobre minhas experiências profissionais...\",\r\n    \"vagas\": \"Estágios, Desenvolvimento Web, Front-end, Back-end\",\r\n    \"usuario\":{\r\n        \"id\": 1\r\n    },\r\n    \"tema\":{\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/postagem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"postagem"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/postagem",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"postagem"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Alterar postagem",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \r\n    \"id\": 1,\r\n    \"anexo\": \"\",\r\n     \"corpoTexto\": \"\",\r\n     \"vagas\": \"\",\r\n     \"tema\":{\r\n         \"id\": 2\r\n     }\r\n}\r\n//Mudar Id\r\n//Id já existente\r\n//Corpo de Texto no maximo 255 caracteres\r\n//Id já existente de tema\r\n//Headers --> Key: Authorization Value: Token\r\n\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/postagem/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"postagem",
+								"1"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/postagem",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"postagem"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Mostrar Vagas",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW41QHRlc3RlLmNvbS5icjp0ZXN0ZWRlc2VuaGE=",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//Headers --> Key: Authorization Value: Token\r\n// exibir todas as vagas postadas",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Get By Titulo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8091/vagas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"vagas",
+								""
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/postagem",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"postagem"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Procurar Vagas",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW41QHRlc3RlLmNvbS5icjp0ZXN0ZWRlc2VuaGE=",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//Headers --> Key: Authorization Value: Token\r\n// procurar por vaga\r\n// escreva na barra após vagas",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Put Postagem",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic am9uYXRoYW5AZW1haWwuY29tLmJyOnNlbmhhMTIz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anexo\": \"Link para currículo aqui\",\r\n    \"corpoTexto\": \"Esta é a minha publicação sobre minhas experiências profissionais...\",\r\n    \"vagas\": \"Estágios, Desenvolvimento Web, Front-end, Back-end\",\r\n    \"usuario\": {\r\n        \"id\": 1,\r\n        \"nomeCompleto\": null,\r\n        \"cep\": null,\r\n        \"numeroCasa\": null,\r\n        \"rne\": null,\r\n        \"telefone\": null,\r\n        \"login\": null,\r\n        \"senha\": null,\r\n        \"empregador\": false,\r\n        \"nomeEmpresa\": null,\r\n        \"cnpj\": null,\r\n        \"endereco\": null,\r\n        \"dataNascimento\": null\r\n    },\r\n    \"tema\": {\r\n        \"id\": 1,\r\n        \"categoria\": null,\r\n        \"descricao\": null,\r\n        \"palavraChave\": null\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/postagem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"postagem"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8091/postagem/vagas/de",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"postagem",
-						"vagas",
-						"de"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Excluir postagem",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic am9uYXRoYW4xNUBnZW5lcmF0aW9uLmNvbTp0ZXN0ZWdnZw==",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "//adicionar id no caminho http\r\n//Headers --> Key: Authorization Value: Token",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Deletar Postagem By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8091/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8091",
+							"path": [
+								"postagens",
+								"1"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8091/postagem/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8091",
-					"path": [
-						"postagem",
-						"1"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
