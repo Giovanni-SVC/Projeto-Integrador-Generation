@@ -1,0 +1,93 @@
+<div class="container-fluid">
+    <div class="row d-flex align-items-center">
+
+        <div class="col-md-6" id="img-bg">
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="text-center mb-4">Cadastro</h1>
+
+                    <div class="form-group mb-4">
+                        <label for="nome">Nome</label>
+                        <input class="form-control" type="text" name="nome" id="nome" placeholder="seu nome">
+
+
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="usuario">Usuário</label>
+                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="seu usuário">
+
+
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="link-foto">Link da foto</label>
+                        <input class="form-control" type="text" name="link-foto" id="link-foto"
+                            placeholder="link da sua foto">
+
+
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="usuario">Biografia</label>
+                        <input class="form-control" type="text" name="usuario" id="usuario"
+                            placeholder="conte um pouco sobre você">
+
+
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="senha">Senha</label>
+                        <input class="form-control" type="text" name="senha" id="senha" placeholder="Sua senha">
+
+
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="confirmar-senha">Repita sua senha:</label>
+                        <input class="form-control" type="text" name="confirmar-senha" id="confirmar-senha"
+                            placeholder="Sua senha">
+
+
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="tipo">Tipo de usuário:</label>
+                        <select class="form-control" name="tipo" id="tipo">
+                            <option>Selecione um tipo de usuário</option>
+                            <option value="normal">Normal</option>
+                            <option value="adm">Administrador</option>
+                        </select>
+
+
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-danger me-5" routerLink = '/entrar'>
+                            Cancelar
+                        </button>
+
+                        <button type="submit" class="btn btn-success">
+                            Cadastrar
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <p class="text-center">
+                Já tem uma conta ? <a routerLink = '/entrar'> Entre </a>
+            </p>
+
+        </div>
+
+
+    </div>
+</div>
