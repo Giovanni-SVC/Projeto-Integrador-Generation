@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.service;
+package com.projetoGama.service;
 
 import java.nio.charset.Charset;
 import java.time.LocalDate;
@@ -12,9 +12,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.projetoGama.projetoGama.model.UserLogin;
-import com.projetoGama.projetoGama.model.Usuario;
-import com.projetoGama.projetoGama.repository.UsuarioRepository;
+import com.projetoGama.model.UserLogin;
+import com.projetoGama.model.Usuario;
+import com.projetoGama.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
@@ -22,7 +22,7 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 
-public Optional<Usuario> cadastrarUsuario(Usuario usuario) {
+public Usuario cadastrarUsuario(Usuario usuario) {
 	
 		// Verifica se o usuário (email) existe
 		if(usuarioRepository.findByLogin(usuario.getLogin()).isPresent())
@@ -40,7 +40,7 @@ public Optional<Usuario> cadastrarUsuario(Usuario usuario) {
 		String senhaEncoder = encoder.encode(usuario.getSenha());
 		usuario.setSenha(senhaEncoder);
 
-		return Optional.of(usuarioRepository.save(usuario));
+		return usuarioRepository.save(usuario);
 	}
 
 	public Optional<Usuario> atualizarUsuario(Usuario usuario){

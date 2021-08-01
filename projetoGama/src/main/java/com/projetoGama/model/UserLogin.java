@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.model;
+package com.projetoGama.model;
 
 public class UserLogin {
 	

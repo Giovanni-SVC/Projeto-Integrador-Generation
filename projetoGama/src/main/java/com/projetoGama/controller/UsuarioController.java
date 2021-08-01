@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.controller;
+package com.projetoGama.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projetoGama.projetoGama.model.UserLogin;
-import com.projetoGama.projetoGama.model.Usuario;
-import com.projetoGama.projetoGama.repository.UsuarioRepository;
-import com.projetoGama.projetoGama.service.UsuarioService;
+import com.projetoGama.model.UserLogin;
+import com.projetoGama.model.Usuario;
+import com.projetoGama.repository.UsuarioRepository;
+import com.projetoGama.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -49,9 +49,9 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Optional<Usuario>> Post(@RequestBody Usuario usuario) {
+	public ResponseEntity <Usuario> Post(@RequestBody Usuario usuario) {
 		
-		Optional <Usuario> usuarioResp = usuarioService.cadastrarUsuario(usuario);
+		Usuario usuarioResp = usuarioService.cadastrarUsuario(usuario);
 		try {
 			return ResponseEntity.status(HttpStatus.CREATED).body(usuarioResp);
 

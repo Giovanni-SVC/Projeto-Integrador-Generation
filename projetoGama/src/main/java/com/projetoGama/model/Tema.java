@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.model;
+package com.projetoGama.model;
 
 import java.util.List;
 

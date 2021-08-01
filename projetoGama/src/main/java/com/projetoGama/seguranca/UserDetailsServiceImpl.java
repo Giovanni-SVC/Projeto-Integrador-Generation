@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.seguranca;
+package com.projetoGama.seguranca;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.projetoGama.projetoGama.model.Usuario;
-import com.projetoGama.projetoGama.repository.UsuarioRepository;
+import com.projetoGama.model.Usuario;
+import com.projetoGama.repository.UsuarioRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{

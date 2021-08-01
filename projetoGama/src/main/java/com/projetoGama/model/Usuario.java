@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.model;
+package com.projetoGama.model;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -57,6 +57,23 @@ public class Usuario {
 	
 	private String endereco;
 	
+	private String objetivoProfissional;
+	
+	private String experiencia1;
+	
+	private String experiencia2;
+	
+	private String experiencia3;
+	
+	private String formacaoacademica;
+	
+	private String cursos;
+	
+	private String idiomas;
+	
+	private String informacoesAdcionais;
+	
+
 	@Column(name = "dt_nascimento")
 	@JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate dataNascimento; // Atributo adicional
@@ -189,5 +206,71 @@ public class Usuario {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+
+	public String getObjetivoProfissional() {
+		return objetivoProfissional;
+	}
+
+	public void setObjetivoProfissional(String objetivoProfissional) {
+		this.objetivoProfissional = objetivoProfissional;
+	}
+
+	public String getExperiencia1() {
+		return experiencia1;
+	}
+
+	public void setExperiencia1(String experiencia1) {
+		this.experiencia1 = experiencia1;
+	}
+
+	public String getExperiencia2() {
+		return experiencia2;
+	}
+
+	public void setExperiencia2(String experiencia2) {
+		this.experiencia2 = experiencia2;
+	}
+
+	public String getExperiencia3() {
+		return experiencia3;
+	}
+
+	public void setExperiencia3(String experiencia3) {
+		this.experiencia3 = experiencia3;
+	}
+
+	public String getFormacaoacademica() {
+		return formacaoacademica;
+	}
+
+	public void setFormacaoacademica(String formacaoacademica) {
+		this.formacaoacademica = formacaoacademica;
+	}
+
+	public String getCursos() {
+		return cursos;
+	}
+
+	public void setCursos(String cursos) {
+		this.cursos = cursos;
+	}
+
+	public String getIdiomas() {
+		return idiomas;
+	}
+
+	public void setIdiomas(String idiomas) {
+		this.idiomas = idiomas;
+	}
+
+	public String getInformacoesAdcionais() {
+		return informacoesAdcionais;
+	}
+
+	public void setInformacoesAdcionais(String informacoesAdcionais) {
+		this.informacoesAdcionais = informacoesAdcionais;
+	}
+	
+	
 
 }

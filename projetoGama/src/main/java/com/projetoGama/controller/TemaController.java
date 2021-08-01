@@ -1,4 +1,4 @@
-package com.projetoGama.projetoGama.controller;
+package com.projetoGama.controller;
 
 import java.util.List;
 
@@ -15,44 +15,50 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projetoGama.projetoGama.model.Postagem;
-import com.projetoGama.projetoGama.repository.PostagemRepository;
+import com.projetoGama.model.Tema;
+import com.projetoGama.repository.TemaRepository;
 
 @RestController
-@RequestMapping("/postagem")
+@RequestMapping("/tema")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class PostagemController {
+public class TemaController {
 	
 	@Autowired
-	private PostagemRepository repository;
+	private TemaRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<Postagem>> GetAll(){
+	public ResponseEntity<List<Tema>> GetAll(){
 		return ResponseEntity.ok(repository.findAll());
 		
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Postagem> GetById(@PathVariable long id){
+	public ResponseEntity<Tema> GetById(@PathVariable long id){
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/vagas/{vagas}")
-	public ResponseEntity<List<Postagem>> GetByTitulo(@PathVariable String vagas){
-		return ResponseEntity.ok(repository.findAllByVagasContainingIgnoreCase(vagas));
+	@GetMapping("/categoria/{categoria}")
+	public ResponseEntity<List<Tema>> GetByTitulo(@PathVariable String categoria){
+		return ResponseEntity.ok(repository.findAllByCategoriaContainingIgnoreCase(categoria));
+	}
+	
+	//filtra por tags
+	@GetMapping("/palavrachave/{palavrachave}")
+	public ResponseEntity<List<Tema>> GetByTags(@PathVariable String palavrachave){
+		return ResponseEntity.ok(repository.findAllByPalavraChaveContainingIgnoreCase(palavrachave));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Postagem> post ( @RequestBody Postagem postagem){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));	
+	public ResponseEntity<Tema> post ( @RequestBody Tema tema){
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tema));	
 		
 	}
 	
 	@PutMapping
-	public ResponseEntity<Postagem> put ( @RequestBody Postagem postagem){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));	
+	public ResponseEntity<Tema> put ( @RequestBody Tema tema){
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(tema));	
 		
 	}
 	
@@ -61,6 +67,5 @@ public class PostagemController {
 		repository.deleteById(id);
 		
 	}
-
 
 }

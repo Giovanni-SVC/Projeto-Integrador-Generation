@@ -1,11 +1,11 @@
-package com.projetoGama.projetoGama.seguranca;
+package com.projetoGama.seguranca;
 
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.projetoGama.projetoGama.model.Usuario;
+import com.projetoGama.model.Usuario;
 
 public class UserDetailsImpl implements UserDetails {
 	
