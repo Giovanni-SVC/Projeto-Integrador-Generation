@@ -243,7 +243,7 @@ public class Usuario {
 		return formacaoAcademica;
 	}
 
-	public void setFormacaoacademica(String formacaoAcademica) {
+	public void setFormacaoAcademica(String formacaoAcademica) {
 		this.formacaoAcademica = formacaoAcademica;
 	}
 
