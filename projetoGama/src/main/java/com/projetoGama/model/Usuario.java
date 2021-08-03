@@ -65,7 +65,7 @@ public class Usuario {
 	
 	private String experiencia3;
 	
-	private String formacaoacademica;
+	private String formacaoAcademica;
 	
 	private String cursos;
 	
@@ -239,12 +239,12 @@ public class Usuario {
 		this.experiencia3 = experiencia3;
 	}
 
-	public String getFormacaoacademica() {
-		return formacaoacademica;
+	public String getFormacaoAcademica() {
+		return formacaoAcademica;
 	}
 
-	public void setFormacaoacademica(String formacaoacademica) {
-		this.formacaoacademica = formacaoacademica;
+	public void setFormacaoacademica(String formacaoAcademica) {
+		this.formacaoAcademica = formacaoAcademica;
 	}
 
 	public String getCursos() {
