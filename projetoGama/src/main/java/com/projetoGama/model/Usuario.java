@@ -71,7 +71,7 @@ public class Usuario {
 	
 	private String idiomas;
 	
-	private String informacoesAdcionais;
+	private String informacoesAdicionais;
 	
 
 	@Column(name = "dt_nascimento")
@@ -263,12 +263,12 @@ public class Usuario {
 		this.idiomas = idiomas;
 	}
 
-	public String getInformacoesAdcionais() {
-		return informacoesAdcionais;
+	public String getInformacoesAdicionais() {
+		return informacoesAdicionais;
 	}
 
-	public void setInformacoesAdcionais(String informacoesAdcionais) {
-		this.informacoesAdcionais = informacoesAdcionais;
+	public void setInformacoesAdicionais(String informacoesAdicionais) {
+		this.informacoesAdicionais = informacoesAdicionais;
 	}
 	
 	
