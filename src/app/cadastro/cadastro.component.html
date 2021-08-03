@@ -12,22 +12,22 @@
                     <h1 class="text-center mb-4">Cadastro</h1>
 
                     <div class="form-group mb-4">
-                        <label for="nome">Nome: </label>
-                        <input class="form-control" type="text" name="nome" id="nome" placeholder="seu nome">
+                        <label for="nomeCompleto">Nome: </label>
+                        <input [(ngModel)]='user.nomeCompleto' class="form-control" type="text" name="nomeCompleto" id="nomeCompleto" placeholder="seu nome" >
 
 
                     </div>
 
                     <div class="form-group mb-4">
-                        <label for="usuario">Usuário: </label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="seu usuário">
+                        <label for="login">Usuário: </label>
+                        <input [(ngModel)]='user.login' class="form-control" type="text" name="login" id="login" placeholder="seu usuário">
 
 
                     </div>
 
                     <div class="form-group mb-4">
-                        <label for="data-nascimento">Data de nascimento: </label>
-                        <input class="form-control" type="date" name="data-nascimento" id="data-nascimento"
+                        <label for="dataNascimento">Data de nascimento: </label>
+                        <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento" id="dataNascimento"
                             placeholder="">
 
 
@@ -36,14 +36,14 @@
 
                     <div class="form-group mb-4">
                         <label for="senha">Senha: </label>
-                        <input class="form-control" type="text" name="senha" id="senha" placeholder="Sua senha">
+                        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
 
 
                     </div>
 
                     <div class="form-group mb-4">
                         <label for="confirmar-senha">Repita sua senha: </label>
-                        <input class="form-control" type="text" name="confirmar-senha" id="confirmar-senha"
+                        <input [(ngModel)]= 'user.senha' class="form-control" type="password" name="confirmarSenha" id="confirmarSenha"
                             placeholder="Sua senha">
 
 
@@ -69,7 +69,7 @@
                             Cancelar
                         </button>
 
-                        <button type="submit" class="btn btn-success">
+                        <button type="submit" class="btn btn-success" (click)='cadastrar()'>
                             Cadastrar
                         </button>
                     </div>
