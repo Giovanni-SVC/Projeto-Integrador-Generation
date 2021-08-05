@@ -13,6 +13,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { CurriculoComponent } from './curriculo/curriculo.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { FormsModule } from '@angular/forms';
+import { InfoComponent } from './info/info.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     ContatoComponent,
     CurriculoComponent,
     EmpresaComponent,
+    InfoComponent
 
   ],
   imports: [
