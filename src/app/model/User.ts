@@ -1,3 +1,5 @@
+import { Postagem } from "./Postagem"
+
 export class User {
     public id: number
     public cep: string
@@ -20,5 +22,6 @@ export class User {
     public rne: string
     public senha: string
     public telefone: string
+    public postagem: Postagem[]
 
 }
