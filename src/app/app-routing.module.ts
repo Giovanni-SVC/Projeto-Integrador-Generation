@@ -1,3 +1,5 @@
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path:'curriculo', component: CurriculoComponent},
   {path:'empresa', component: EmpresaComponent},
   {path:'info', component: InfoComponent},
-  {path: 'tema', component: TemaComponent}
+  {path: 'tema', component: TemaComponent},
+  {path: 'tema-edit/:id', component: TemaEditComponent},
+  {path: 'tema-delete/:id', component: TemaDeleteComponent}
 ];
 
 @NgModule({

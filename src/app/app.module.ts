@@ -16,6 +16,8 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { FormsModule } from '@angular/forms';
 import { InfoComponent } from './info/info.component';
 import { TemaComponent } from './tema/tema.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { TemaComponent } from './tema/tema.component';
     CurriculoComponent,
     EmpresaComponent,
     InfoComponent,
-    TemaComponent
+    TemaComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
 
   ],
   imports: [
