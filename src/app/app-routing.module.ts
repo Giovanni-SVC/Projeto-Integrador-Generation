@@ -4,6 +4,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CurriculoComponent } from './curriculo/curriculo.component';
 import { EmpresaComponent } from './empresa/empresa.component';
+import { HomeComponent } from './home/home.component';
 import { InfoComponent } from './info/info.component';
 import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:'empresa', component: EmpresaComponent},
   {path:'info', component: InfoComponent},
   {path: 'tema', component: TemaComponent},
-  {path: 'sobre', component: SobreComponent}
+  {path: 'sobre', component: SobreComponent},
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
