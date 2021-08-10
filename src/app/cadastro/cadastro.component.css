@@ -1,0 +1,8 @@
+  
+#img-bg{
+    background-image: url('../../assets/img/bandeira_refugiados.jpg');
+    min-height: 1040px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

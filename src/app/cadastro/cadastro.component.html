@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <div class="row d-flex align-items-center">
+
+    <div class="col-md-6" id="img-bg">
+
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+          <h1 class="text-center mb-4">Cadastro</h1>
+
+          <div class="form-group mb-4">
+            <label for="nomeCompleto">Nome: </label>
+            <input [(ngModel)]='user.nomeCompleto' class="form-control" type="text" name="nomeCompleto"
+              id="nomeCompleto" placeholder="seu nome">
+
+
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="login">Usuário: </label>
+            <input [(ngModel)]='user.login' class="form-control" type="text" name="login" id="login"
+              placeholder="seu usuário">
+
+
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="dataNascimento">Data de nascimento: </label>
+            <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento"
+              id="dataNascimento" placeholder="">
+
+
+          </div>
+
+
+          <div class="form-group mb-4">
+            <label for="senha">Senha: </label>
+            <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+              placeholder="Sua senha">
+
+
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="confirmar-senha">Repita sua senha: </label>
+            <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
+              id="confirmarSenha" placeholder="Sua senha">
+
+
+          </div>
+
+
+
+          <div class="form-group mb-4">
+            <label for="tipo">Tipo de usuário:</label>
+            <select class="form-control" name="tipo" id="tipo">
+              <option>Selecione um tipo de usuário</option>
+              <option value="normal">Comum</option>
+              <option value="adm">Empresa</option>
+              <option value="adm">Administrador</option>
+
+            </select>
+
+
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-danger me-5" routerLink='/login'>
+              Cancelar
+            </button>
+
+            <button type="submit" class="btn btn-success" (click)='cadastrar()'>
+              Cadastrar
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="mt-5 mb-5">
+
+      <p class="text-center">
+        Já tem uma conta ? <a routerLink='/login'> Entre </a>
+      </p>
+
+      <p class="text-center">
+        Entre em <a routerLink='/contato'> contato</a> conosco!
+      </p>
+
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="form-group mb-4">
+  <label for="nomeCompleto">Nome: </label>
+  <input [(ngModel)]='user.nomeCompleto' class="form-control" type="text" name="nomeCompleto"
+    id="nomeCompleto" placeholder="seu nome">
+
+
+</div>
+
+<div class="form-group mb-4">
+  <label for="login">Usuário: </label>
+  <input [(ngModel)]='user.login' class="form-control" type="text" name="login" id="login"
+    placeholder="seu usuário">
+
+
+</div>
+
+<div class="form-group mb-4">
+  <label for="dataNascimento">Data de nascimento: </label>
+  <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento"
+    id="dataNascimento" placeholder="">
+
+
+</div>
+
+
+<div class="form-group mb-4">
+  <label for="senha">Senha: </label>
+  <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+    placeholder="Sua senha">
+
+
+</div>
+
+<div class="form-group mb-4">
+  <label for="confirmar-senha">Repita sua senha: </label>
+  <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
+    id="confirmarSenha" placeholder="Sua senha">
+
+
+</div>
+<button type="button" class="btn-success" (click)='atualizar()'>Atualizar</button>
