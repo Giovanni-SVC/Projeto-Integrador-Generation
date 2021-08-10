@@ -82,8 +82,9 @@ public Usuario cadastrarUsuario(Usuario usuario) {
 				String auth = userLogin.get().getLogin() + ":" + userLogin.get().getSenha();
 				byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic " + new String(encodedAuth);
-
-				userLogin.get().setToken(authHeader);				
+				userLogin.get().setId(usuario.get().getId());
+				userLogin.get().setToken(authHeader);
+				userLogin.get().setLogin(usuario.get().getLogin());				
 				userLogin.get().setNome(usuario.get().getNomeCompleto());
 				userLogin.get().setSenha(usuario.get().getSenha());
 

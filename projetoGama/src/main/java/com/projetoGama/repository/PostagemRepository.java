@@ -10,6 +10,7 @@ import com.projetoGama.model.Postagem;
 @Repository
 public interface PostagemRepository extends JpaRepository<Postagem, Long>{
 	
-	public List<Postagem> findAllByVagasContainingIgnoreCase (String vagas);
+	public List<Postagem> findAllByConteudoContainingIgnoreCase (String conteudo);
+	public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo);
 
 }

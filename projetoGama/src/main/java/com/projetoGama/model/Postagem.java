@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Size;
+//import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -21,17 +21,17 @@ public class Postagem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
-	private String anexo;
-	
-	@Size(min=10, max=255)
+	//@Size(min=10, max=255)
 	private String titulo;
 	
 	private String conteudo;
 	
+	private String anexo;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date data = new java.sql.Date(System.currentTimeMillis());
+
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
@@ -49,26 +49,6 @@ public class Postagem {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-
-	public Date getData() {
-		return data;
-	}
-
-
-	public void setData(Date data) {
-		this.data = data;
-	}
-
-
-	public String getAnexo() {
-		return anexo;
-	}
-
-
-	public void setAnexo(String anexo) {
-		this.anexo = anexo;
 	}
 
 
@@ -91,6 +71,23 @@ public class Postagem {
 		this.conteudo = conteudo;
 	}
 
+	public String getAnexo() {
+		return anexo;
+	}
+
+
+	public void setAnexo(String anexo) {
+		this.anexo = anexo;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+
+	public void setData(Date data) {
+		this.data = data;
+	}
 
 	public Usuario getUsuario() {
 		return usuario;
