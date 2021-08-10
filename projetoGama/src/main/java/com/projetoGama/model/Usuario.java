@@ -48,8 +48,6 @@ public class Usuario {
 	//@Size(min = 8);
 	private String senha;
 	
-	private boolean empregador;
-	
 	private String nomeEmpresa;
 	
 	@CNPJ
@@ -175,13 +173,7 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public boolean isEmpregador() {
-		return empregador;
-	}
-
-	public void setEmpregador(boolean empregador) {
-		this.empregador = empregador;
-	}
+	
 
 	public String getNomeEmpresa() {
 		return nomeEmpresa;
