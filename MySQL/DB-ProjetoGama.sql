@@ -8,7 +8,6 @@ CREATE TABLE `tb_usuario` (
 	`Telefone` varchar(255) NOT NULL,
 	`Login` varchar(255) NOT NULL,
 	`Senha` varchar(255) NOT NULL,
-	`Empregador` BOOLEAN NOT NULL,
 	`Nome Empresa` varchar(255) NOT NULL,
 	`CNPJ` varchar(255) NOT NULL,
 	`Endereço` varchar(255) NOT NULL,
@@ -21,6 +20,7 @@ CREATE TABLE `tb_usuario` (
 	`Idiomas` varchar(255) NOT NULL,
 	`Informações Adicionais` varchar(255) NOT NULL,
 	`Data de Nascimento` DATE NOT NULL,
+	`TipoUsuario` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
