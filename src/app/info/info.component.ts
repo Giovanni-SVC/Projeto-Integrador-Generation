@@ -19,10 +19,14 @@ export class InfoComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   tituloPost: string
+  conteudo: string
 
   listaTemas: Tema[]
   idTema: number
   tema: Tema = new Tema()
+  categoria: string
+  palavraChave: string
+  palavraR: Postagem
 
   user: User = new User()
   idUser = environment.id
@@ -99,6 +103,39 @@ export class InfoComponent implements OnInit {
       }else{
       this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[])=>{
         this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByConteudoPostagem(){
+
+    if(this.conteudo == ''){
+      this.getAllPostagens()
+      }else{
+      this.postagemService.getByConteudoPostagem(this.conteudo).subscribe((resp: Postagem[])=>{
+        this.listaPostagens = resp
+      })
+    }
+  }
+
+  findByCategoriaTema(){
+
+    if(this.categoria == ''){
+      this.getAllTemas()
+      }else{
+      this.temaService.getByCategoriaTema(this.categoria).subscribe((resp: Tema[])=>{
+        this.listaTemas = resp
+      })
+    }
+  }
+
+  findByPalavraChaveTema(){
+
+    if(this.palavraChave == ''){
+      this.getAllPostagens()
+      }else{
+      this.temaService.getByPalavraChaveTema(this.palavraChave).subscribe((resp: Tema[])=>{
+        this.listaTemas = resp
       })
     }
   }

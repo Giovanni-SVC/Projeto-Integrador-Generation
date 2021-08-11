@@ -43,8 +43,12 @@
 
   
   <div class="tab-content" id="nav-tabContent">
-    <!-- Erro ngModel -->
-    <div class="row d-flex justify-content-center">
+    
+
+    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+      
+      <!--  -->
+    <div class="row d-flex justify-content-center ">
       <div class="col-md-4">
         <div class="form-group">
           <input type="text" class="from-control" id="titulo" placeholder="Digite o nome do titulo da postagem" [(ngModel)]='tituloPost'  (keyup)='findByTituloPostagem()'>
@@ -52,7 +56,17 @@
       </div>
     </div> 
     <!--  -->
-    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+
+    <!--  -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4">
+        <div class="form-group">
+          <input type="text" class="from-control" id="conteudo" placeholder="Digite o nome do conteudo da postagem" [(ngModel)]='conteudo'  (keyup)='findByConteudoPostagem()'>
+        </div>
+      </div>
+    </div> 
+    <!--  -->
+
       <div class="card-columns">
         <div class="card text-center" style="width: 18rem;" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
           <div class="card-body">
@@ -91,6 +105,27 @@
     </div>
 
     <div class="tab-pane fade" id="postagensPorTema" role="tabpanel" aria-labelledby="nav-postagensPorTema-tab">
+
+      <div class="tab-content" id="nav-tabContent">
+        <!--  -->
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="from-control" id="cate" placeholder="" [(ngModel)]='categoria'  (keyup)='findByCategoriaTema()'>
+            </div>
+          </div>
+        </div> 
+        <!--  -->
+    
+        <!--  -->
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" class="from-control" id="palavraChave" placeholder="" [(ngModel)]='palavraChave'  (keyup)='findByPalavraChaveTema()'>
+            </div>
+          </div>
+        </div> 
+        <!--  -->
 
       <div class="card-columns" *ngFor='let tema of listaTemas'>
         <div class="card text-center" style="width: 18rem;" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
