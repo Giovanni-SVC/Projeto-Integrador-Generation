@@ -16,21 +16,21 @@ export class AuthService {
 
 
 entrar(userLogin: UserLogin): Observable<UserLogin>{
-  return this.http.post<UserLogin>('https://blogdogio.herokuapp.com/usuarios/logar', userLogin)
+  return this.http.post<UserLogin>('https://projetogama.herokuapp.com/usuarios/logar', userLogin)
 
 }
 
 cadastrar(user: User): Observable<User>{
-  return this.http.post<User>('https://blogdogio.herokuapp.com/usuarios/cadastrar', user)
+  return this.http.post<User>('https://projetogama.herokuapp.com/usuarios/cadastrar', user)
 
 }
 
 getByIdUser(id: number): Observable<User>{
-return this.http.get<User>(`https://blogdogio.herokuapp.com/usuarios/${id}`)
+return this.http.get<User>(`https://projetogama.herokuapp.com/usuarios/${id}`)
 }
 
 alterar(user: User): Observable<User>{
-  return this.http.put<User>('https://blogdogio.herokuapp.com/usuarios/alterar', user)
+  return this.http.put<User>('https://projetogama.herokuapp.com/usuarios/alterar', user)
 }
 
 logado(){

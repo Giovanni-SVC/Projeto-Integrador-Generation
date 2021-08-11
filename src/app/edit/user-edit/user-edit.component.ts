@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/model/User';
 import { AuthService } from 'src/app/service/auth.service';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -20,7 +21,8 @@ export class UserEditComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(){
@@ -46,20 +48,22 @@ export class UserEditComponent implements OnInit {
 
   atualizar(){
 
-    if(this.user.senha != this.confirmarSenha) {
-      alert('As senhas estão incorretas')
-
-    } else {
+    if(this.user.senha == this.confirmarSenha) {
+      
       this.authService.alterar(this.user).subscribe((resp: User) => {
-        this.user = resp
-        console.log(this.user)
-        this.router.navigate(['/info'])
-        alert('Usuário atualizado com sucesso')
-        environment.nome = ''
-        environment.token = ''
-        environment.id = 0
-        this.router.navigate(['/login'])
+      this.user = resp
+      console.log(this.user)
+      console.log(this.tipoUsuario)
+      this.router.navigate(['/info'])
+      this.alertas.showAlertSuccess('Usuário atualizado com sucesso, faça o login novamente')
+      environment.nome = ''
+      environment.token = ''
+      environment.id = 0
+      environment.tipoUsuario = ''
+      this.router.navigate(['/login'])
       })
+    } else {
+      this.alertas.showAlertDanger('As senhas estão incorretas')
     }
   }
 

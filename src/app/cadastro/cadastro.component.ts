@@ -12,6 +12,7 @@ export class CadastroComponent implements OnInit {
 
   user: User = new User
   confirmarSenha: string
+  tipoUsuario: string
 
   constructor(
     private authService: AuthService,
@@ -26,7 +27,9 @@ export class CadastroComponent implements OnInit {
     this.confirmarSenha = event.target.value
   }
 
-
+  tipouser(event: any){
+    this.tipoUsuario = event.target.value
+  }
 
   cadastrar(){
     if(this.user.senha != this.confirmarSenha){

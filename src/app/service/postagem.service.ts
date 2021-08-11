@@ -20,7 +20,15 @@ getAllPostagens(): Observable<Postagem[]>{
 }
 
 getByIdPostagem(id: number): Observable<Postagem>{
-  return this.http.get<Postagem>(`https://blogdogio.herokuapp.com/postagens/${id}`, this.token)
+  return this.http.get<Postagem>(`https://projetogama.herokuapp.com/postagem/${id}`, this.token)
+}
+
+getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+  return this.http.get<Postagem[]>(`https://projetogama.herokuapp.com/postagem/titulo/${titulo}`, this.token)
+}
+
+getByConteudoPostagem(conteudo: string): Observable<Postagem[]>{
+  return this.http.get<Postagem[]>(`https://projetogama.herokuapp.com/postagem/conteudo/${conteudo}`, this.token)
 }
 
 postPostagem(postagem: Postagem): Observable<Postagem>{
@@ -32,7 +40,7 @@ putPostagem(postagem: Postagem): Observable<Postagem>{
 }
 
 deletePostagem(id: number){
-  return this.http.delete(`https://blogdogio.herokuapp.com/postagens/${id}`, this.token)
+  return this.http.delete(`https://projetogama.herokuapp.com/postagem/${id}`, this.token)
 }
 
 }

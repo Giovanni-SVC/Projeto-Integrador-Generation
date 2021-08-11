@@ -41,20 +41,27 @@
 
   </nav>
 
-
+  
   <div class="tab-content" id="nav-tabContent">
-
+    <!-- Erro ngModel -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4">
+        <div class="form-group">
+          <input type="text" class="from-control" id="titulo" placeholder="Digite o nome do titulo da postagem" [(ngModel)]='tituloPost'  (keyup)='findByTituloPostagem()'>
+        </div>
+      </div>
+    </div> 
+    <!--  -->
     <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
       <div class="card-columns">
-        <div class="card text-center" style="width: 18rem;" *ngFor='let item of listaPostagens'>
+        <div class="card text-center" style="width: 18rem;" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <small class="card-text">Tema: {{item.tema.descricao}}</small>
-            <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
-                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+            <small class="card-text">Tema: {{item.tema.categoria}}</small>
+            <p class="card-text mt-3">{{item.conteudo}}</p><small class="text-muted">
+                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
             <p class="card-text"><small class="text-muted">
-                Publicado por: {{item.usuario.nomeEmpresa}}
-                <!-- {{item.usuario.nomeCompleto}} -->
+                Publicado por: {{item.usuario.nomeCompleto}}
               </small></p>
 
           </div>
@@ -65,7 +72,7 @@
     <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
 
       <div class="card-columns">
-        <div class="card text-center" style="width: 18rem;" *ngFor='let item of user.postagem'>
+        <div class="card text-center" style="width: 18rem;" *ngFor='let item of user.postagem | orderBy : key : reverse'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <small class="card-text">Tema: {{item.tema.descricao}}</small>
@@ -86,14 +93,13 @@
     <div class="tab-pane fade" id="postagensPorTema" role="tabpanel" aria-labelledby="nav-postagensPorTema-tab">
 
       <div class="card-columns" *ngFor='let tema of listaTemas'>
-        <div class="card text-center" style="width: 18rem;" *ngFor='let item of tema.postagem'>
+        <div class="card text-center" style="width: 18rem;" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <small class="card-text">Tema: {{item.tema.descricao}}</small>
             <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small>
-            <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+           <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p> 
 
-            <p class="card-text"><small class="text-muted">Autor: {{item.usuario.nomeEmpresa}}</small></p>
+            <p class="card-text"><small class="text-muted">Autor: {{item.usuario.nomeCompleto}}</small></p>
 
 
           </div>
@@ -105,6 +111,7 @@
     </div>
   </div>
 </div>
+
 
 
 <!-- Modal -->
@@ -121,12 +128,18 @@
         <div class="form-group">
           <label for="titulo">Título</label>
           <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
-            placeholder="Digite o título" />
+            placeholder="Digite o título">
         </div>
 
         <div class="form-group">
-          <label for="texto">Texto</label>
-          <textarea [(ngModel)]='postagem.conteudo' name="texto" id="texto" class="form-control" rows="3"></textarea>
+          <label for="anexo">Anexo</label>
+          <input [(ngModel)]='postagem.anexo' type="text" class="form-control" id="anexo"
+            placeholder="Digite o anexo">
+        </div>
+
+        <div class="form-group">
+          <label for="conteudo">Texto</label>
+          <textarea [(ngModel)]='postagem.conteudo' name="texto" id="conteudo" class="form-control" rows="3"></textarea>
         </div>
 
         <div class="form-group">

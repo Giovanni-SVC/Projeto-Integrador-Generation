@@ -55,11 +55,11 @@
 
 
           <div class="form-group mb-4">
-            <label for="tipo">Tipo de usuário:</label>
-            <select class="form-control" name="tipo" id="tipo">
+            <label for="tipoUsuario">Tipo de usuário:</label>
+            <select (change)='tipouser($event)' class="form-control" name="tipo" id="tipoUsuario">
               <option>Selecione um tipo de usuário</option>
               <option value="normal">Comum</option>
-              <option value="adm">Empresa</option>
+              <option value="empr">Empresa</option>
               <option value="adm">Administrador</option>
 
             </select>

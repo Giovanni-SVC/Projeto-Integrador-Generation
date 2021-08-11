@@ -24,6 +24,14 @@ export class TemaService {
 
   }
 
+  getByCategoriaTema(categoria: string): Observable<Tema>{
+    return this.http.get<Tema>(`https://projetogama.herokuapp.com/tema/categoria/${categoria}`, this.token)
+  }
+
+  getByPalavraChaveTema(palavraChave: string): Observable<Tema>{
+    return this.http.get<Tema>(`https://projetogama.herokuapp.com/tema/palavraChave/${palavraChave}`, this.token)
+  }
+
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://projetogama.herokuapp.com/tema', tema, this.token)
   }
