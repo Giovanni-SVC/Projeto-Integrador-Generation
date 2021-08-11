@@ -49,11 +49,11 @@
         <div class="card text-center" style="width: 18rem;" *ngFor='let item of listaPostagens'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <!-- <small class="card-text">Tema: {{item.tema.descricao}}</small> -->
+            <small class="card-text">Tema: {{item.tema.categoria}}</small>
             <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
                 {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
             <p class="card-text"><small class="text-muted">
-                <!-- Publicado por: {{item.usuario.nomeCompleto}} -->
+                Publicado por: {{item.usuario.nomeCompleto}}
               </small></p>
 
           </div>
@@ -67,9 +67,9 @@
         <div class="card text-center" style="width: 18rem;" *ngFor='let item of user.postagem'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
-            <!-- <small class="card-text">Tema: {{item.tema.descricao}}</small> -->
-            <!-- <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"> -->
-              <!-- {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p> -->
+            <small class="card-text">Tema: {{item.tema.descricao}}</small>
+            <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
+              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
 
               <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
               <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
@@ -87,12 +87,11 @@
       <div class="card-columns" *ngFor='let tema of listaTemas'>
         <div class="card text-center" style="width: 18rem;" *ngFor='let item of tema.postagem'>
           <div class="card-body">
-            <!-- <h5 class="card-title m-0">{{item.titulo}}</h5> -->
-            <!-- <small class="card-text">Tema: {{item.tema.descricao}}</small> -->
-            <!-- <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small> -->
-            <!-- <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p> -->
+            <h5 class="card-title m-0">{{item.titulo}}</h5>
+            <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small>
+           <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p> 
 
-            <!-- <p class="card-text"><small class="text-muted">Autor: {{item.usuario.nomeCompleto}}</small></p> -->
+            <p class="card-text"><small class="text-muted">Autor: {{item.usuario.nomeCompleto}}</small></p>
 
 
           </div>

@@ -1,41 +1,56 @@
-<div class="form-group mb-4">
-  <label for="nomeCompleto">Nome: </label>
-  <input [(ngModel)]='user.nomeCompleto' class="form-control" type="text" name="nomeCompleto"
-    id="nomeCompleto" placeholder="seu nome">
+<div class="conteiner-fluid">
+  <div class="row  justify-content-center">
+    <div class="col-md-10">
+      <!-- Inicio do formulario -->
+      <div class="form-group mb-4">
+        <label for="nomeCompleto">Nome: </label>
+        <input [(ngModel)]='user.nomeCompleto' class="form-control" type="text" name="nomeCompleto"
+          id="nomeCompleto" placeholder="seu nome">
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="login">Usuário: </label>
+        <input [(ngModel)]='user.login' class="form-control" type="text" name="login" id="login"
+          placeholder="seu usuário">
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="dataNascimento">Data de nascimento: </label>
+        <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento"
+          id="dataNascimento" placeholder="">
+      </div>
 
 
+      <div class="form-group mb-4">
+        <label for="senha">Senha: </label>
+        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+          placeholder="Sua senha">
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="confirmar-senha">Repita sua senha: </label>
+        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
+          id="confirmarSenha" placeholder="Sua senha">
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="tipo">Tipo de usuário:</label>
+        <select class="form-control" name="tipo" id="tipo">
+          <option>Selecione um tipo de usuário</option>
+          <option value="normal">Comum</option>
+          <option value="adm">Empresa</option>
+          <option value="adm">Administrador</option>
+        </select>
+      </div>
+
+      <!-- Botões -->
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-success mr-2 mb-2"  (click)='atualizar()'>Atualizar</button>
+        <button type="submit" class="btn btn-light mr-2 mb-2" routerLink='/info'>Cancelar</button>
+      </div>
+
+      <!-- Final do formulario -->
+    </div>
+  </div>
 </div>
-
-<div class="form-group mb-4">
-  <label for="login">Usuário: </label>
-  <input [(ngModel)]='user.login' class="form-control" type="text" name="login" id="login"
-    placeholder="seu usuário">
-
-
-</div>
-
-<div class="form-group mb-4">
-  <label for="dataNascimento">Data de nascimento: </label>
-  <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento"
-    id="dataNascimento" placeholder="">
-
-
-</div>
-
-
-<div class="form-group mb-4">
-  <label for="senha">Senha: </label>
-  <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
-    placeholder="Sua senha">
-
-
-</div>
-
-<div class="form-group mb-4">
-  <label for="confirmar-senha">Repita sua senha: </label>
-  <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
-    id="confirmarSenha" placeholder="Sua senha">
-
-
-</div>
-<button type="button" class="btn-success" (click)='atualizar()'>Atualizar</button>

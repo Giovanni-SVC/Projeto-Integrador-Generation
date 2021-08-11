@@ -54,7 +54,7 @@ export class UserEditComponent implements OnInit {
         this.user = resp
         console.log(this.user)
         this.router.navigate(['/info'])
-        alert('Usuário atualizado com sucesso')
+        alert('Usuário atualizado com sucesso, faça o login novamente')
         environment.nome = ''
         environment.token = ''
         environment.id = 0

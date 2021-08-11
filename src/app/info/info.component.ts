@@ -78,6 +78,7 @@ export class InfoComponent implements OnInit {
       this.postagem = resp
       console.log(this.postagem)
       alert('Postagem realizada com sucesso!')
+      this.postagem = new Postagem()
       this.getAllPostagens()
     })
 
