@@ -13,45 +13,6 @@ body {
     height: 37px; 
 }
 
-button{
-
-  display: flex;
-  justify-content: center;
-  font-size: 13pt;
-  font-weight: 400;
-  letter-spacing: 1px;
-  width: 100%;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  outline: none;
-}
-
-.button-empresa{
-  border-bottom-right-radius:20px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius:20px;
-  margin-right: 5px;
-  color: #000000;
-  background-color: #ffffffa4;
-  box-shadow: #000000 0px 0px 2px 0px;
-}
-
-.button-comum{
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-left:15px;
-  color: #000000;
-  background-color: #ffffffa4;
-  box-shadow: #000 0px 0px 2px 0px;
-}
-
-button:hover{
-  background: linear-gradient(to right, #03658C, #03658C);
-  color: #ffffff;
-  transition: .4s ease;
-}
 
 .login-card {
   border: 0;
@@ -61,7 +22,7 @@ button:hover{
 }
 .login-card-img {
     border-radius: 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover; 
@@ -135,15 +96,11 @@ button:hover{
     color: #919aa3;
     margin-bottom: 12px; 
   }
-  .login-card-footer-texto {
-    font-size: 16px;
-    color: #0d2366;
-    margin-bottom: 60px; 
+  .login-card-footer-texto p {
+    margin-top: 50px;
   }
+  
     
   .login-card-footer-nav a {
-    display: flex;
-    justify-content: center;
     font-size: 14px;
-    color: #919aa3; 
-  }
+    color: #919aa3; }
