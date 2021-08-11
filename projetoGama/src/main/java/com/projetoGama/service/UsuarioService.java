@@ -87,6 +87,8 @@ public Usuario cadastrarUsuario(Usuario usuario) {
 				userLogin.get().setLogin(usuario.get().getLogin());				
 				userLogin.get().setNome(usuario.get().getNomeCompleto());
 				userLogin.get().setSenha(usuario.get().getSenha());
+				userLogin.get().setTipoUsuario(usuario.get().getTipoUsuario());
+				userLogin.get().setFoto(usuario.get().getFoto());
 
 				return userLogin;
 

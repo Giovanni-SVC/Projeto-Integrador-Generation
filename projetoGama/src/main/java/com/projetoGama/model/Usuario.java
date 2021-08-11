@@ -27,6 +27,8 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	private String foto;
+
 	@NotNull
 	//@Size(min = 2, max = 100)
 	private String nomeCompleto;
@@ -49,6 +51,8 @@ public class Usuario {
 	private String senha;
 	
 	private String nomeEmpresa;
+
+	private String tipoUsuario;
 	
 	@CNPJ
 	private String cnpj;
@@ -117,6 +121,14 @@ public class Usuario {
 		this.id = id;
 	}
 
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
 	public String getNomeCompleto() {
 		return nomeCompleto;
 	}
@@ -181,6 +193,14 @@ public class Usuario {
 
 	public void setNomeEmpresa(String nomeEmpresa) {
 		this.nomeEmpresa = nomeEmpresa;
+	}
+
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
 	}
 
 	public String getCnpj() {

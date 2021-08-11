@@ -14,6 +14,8 @@ public class UserLogin {
 
 	private String tipoUsuario;
 
+	private String foto;
+
 	public long getId() {
 		return id;
 	}
@@ -61,6 +63,14 @@ public class UserLogin {
 
 	public void setTipoUsuario(String tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 }
