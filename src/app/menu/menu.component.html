@@ -1,37 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <h2 class="navbar-brand" href="#">Gama</h2>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-refugee">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+          <img src="../../assets/img/APRESEAtivo 2.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          Gama
+        </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li class="nav-item active">
-
-        </li>
-        <li class="nav-item pl-3">
-          <p class="m-0 font-weight-bold text-white fs-16"> Olá, {{nome}}</p>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/info">Home</a>
         </li>
 
-        <li class="nav-item pl-3">
-          <a [routerLink]="['/user-edit', id]">
-            <p class="text-white text-right fs-16 m-0"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </p>
-          </a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="#">Vagas</a>
         </li>
 
-        
-          
-        <li class="nav-item pl-3 text-right">
-          <a (click)='sair()'
-          class="m-0 font-weight-bold text-white fs-16"> Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
-          </a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/sobre">Sobre nós</a>
         </li>
-        
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="contato">Contato</a>
+        </li>
+
+
+         
+
+
+     
       </ul>
-      <form class="form-inline my-2 my-lg-0 align-items-center">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="d-flex align-itens-end">
+
+        <button class="btn btn-outline-dark" (click)='sair()' href='' type="submit">Sair</button>
       </form>
     </div>
-    
-  </nav>
+  </div>
+</nav>

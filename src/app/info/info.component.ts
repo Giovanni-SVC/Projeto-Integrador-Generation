@@ -9,6 +9,7 @@ import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 import { AlertasService } from '../service/alertas.service';
 
+
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
@@ -20,6 +21,7 @@ export class InfoComponent implements OnInit {
   listaPostagens: Postagem[]
   tituloPost: string
   conteudo: string
+  
 
   listaTemas: Tema[]
   idTema: number
@@ -30,6 +32,8 @@ export class InfoComponent implements OnInit {
 
   user: User = new User()
   idUser = environment.id
+  nome = environment.nome
+  tipoUsuario = environment.tipoUsuario
 
   key = 'data'
   reverse = true
@@ -47,8 +51,8 @@ export class InfoComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      this.alertas.showAlertInfo('Faça o login')
-      this.router.navigate(['/home'])
+    this.alertas.showAlertInfo('Faça o login')
+     this.router.navigate(['/home'])
     }
 
     this.getAllTemas()
