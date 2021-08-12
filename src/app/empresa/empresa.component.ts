@@ -34,7 +34,7 @@ export class EmpresaComponent implements OnInit {
   cadastrar(){
     //this.user.tipoUsuario = this.tipoUsuario
     //setar em cadastro de usuario
-    this.user.tipoUsuario = 'empresa'
+    this.user.tipoUsuario = 'empr'
     if(this.user.senha != this.confirmarSenha){
       alert('As senhas estão incorretas!')
     }else{

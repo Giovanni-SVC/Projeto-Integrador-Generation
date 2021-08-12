@@ -26,7 +26,7 @@ export class TemaComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
-    if(environment.tipoUsuario != 'adm'){
+    if(environment.tipoUsuario != 'adm' && environment.tipoUsuario != 'empr'){
       // if( environment.tipoUsuario !='empr')
       this.alertas.showAlertDanger('acesso negado')
       this.router.navigate(['/info'])
