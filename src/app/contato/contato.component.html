@@ -1,52 +1,29 @@
-<div class="container mb-5">
-    <div class="text-center mb-5">
-        <h1>Entre em contato conosco</h1>
-    </div>
-
-    <div class="row mb-5">
-        <div class="col-md-12">
-            <h4 class="text-center">
-                Insira seu E-mail e o assunto a ser tratado que retornaremos o mais rapido possível
-            </h4>
+<main class="contact-page">
+    <div class="container">
+        <h1 class="oleez-page-title wow fadeInUp">Entre em contato conosco</h1>
+        <div class="row">
+            <div class="col-md-6 mb-5 mb-md-0 pr-lg-5 wow fadeInLeft">
+                <div class="embed-responsive embed-responsive-1by1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1353082312467!2d-46.68338588502216!3d-23.563583384681895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce579d45a95e2d%3A0x7608344a890bcfd0!2sR.%20C%C3%B4nego%20Eug%C3%AAnio%20Leite%2C%20623%20-%20ANDAR%202%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005414-011!5e0!3m2!1sen!2sbr!4v1628518511692!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="col-md-6 pl-lg-5 wow fadeInRight">
+                <form action="POST" class="oleez-contact-form">
+                    <div class="form-group">
+                        <input type="text" class="oleez-input" id="fullName" name="fullName" required>
+                        <label for="fullName">Nome completo</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="oleez-input" id="fullName" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea name="message" id="message" rows="10" class="oleez-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
-
-    <div class="row d-flex align-items-center">
-        <div class="col-md-6">
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Endereço de email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="nome@exemplo.com">
-                </div>
-
-                <div class="form-group mb-2">
-                    <label for="exampleFormControlTextarea1">Assunto</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-
-                <div class="form-group d-flex justify-content-end">
-                    <button class="btn btn-outline-secondary" type="button"
-                        class="btn btn-secondary btn-sm">Enviar</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="col-md-6 container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.144296454126!2d-48.4820813!3d-1.4526414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x112dca50f9c7b665!2sNazareth%20Architectural%20Complex!5e0!3m2!1sen!2sbr!4v1626917287815!5m2!1sen!2sbr"
-                width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </div>
-
-    <hr class="mt-5 mb-5">
-
-            <p class="text-center">
-                Já tem uma conta ? <a routerLink = '/login'> Entre </a>
-            </p>
-
-            <p class="text-center">
-                Ainda não ? <a routerLink = '/cadastro'>Cadastre-se</a>
-            </p>
-
-</div>
+</main>

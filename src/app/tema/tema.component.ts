@@ -23,7 +23,7 @@ export class TemaComponent implements OnInit {
 
   ngOnInit() {
     if(environment.token == ''){
-      this.router.navigate(['/login'])
+      this.router.navigate(['/home'])
     }
 
     if(environment.tipoUsuario != 'adm'){

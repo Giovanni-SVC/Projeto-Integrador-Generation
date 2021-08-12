@@ -34,7 +34,7 @@ export class PostagemEditComponent implements OnInit {
     window.scroll(0,0)
 
   if(environment.token == ''){
-      this.router.navigate(['/login'])
+      this.router.navigate(['/home'])
     }
 
     let id = this.route.snapshot.params['id']

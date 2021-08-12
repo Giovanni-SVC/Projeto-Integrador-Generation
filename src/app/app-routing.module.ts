@@ -12,14 +12,19 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { InfoComponent } from './info/info.component';
 import { LoginComponent } from './login/login.component';
 import { TemaComponent } from './tema/tema.component';
+import { HomeComponent } from './home/home.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'login', pathMatch: 'full'},
+  {path:'', redirectTo:'home', pathMatch: 'full'},
   {path:'login', component: LoginComponent},
   {path:'cadastro', component: CadastroComponent},
   {path:'contato', component: ContatoComponent},
   {path:'curriculo', component: CurriculoComponent},
   {path:'empresa', component: EmpresaComponent},
+  {path: 'home' , component: HomeComponent},
+  {path: 'sobre' , component: SobreComponent},
+  
 
   {path:'info', component: InfoComponent},
   {path: 'tema', component: TemaComponent},

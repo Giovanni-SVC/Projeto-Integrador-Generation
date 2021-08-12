@@ -48,7 +48,7 @@ export class InfoComponent implements OnInit {
 
     if(environment.token == ''){
       this.alertas.showAlertInfo('Faça o login')
-      this.router.navigate(['/login'])
+      this.router.navigate(['/home'])
     }
 
     this.getAllTemas()

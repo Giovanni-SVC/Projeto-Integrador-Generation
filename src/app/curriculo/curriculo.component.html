@@ -1,124 +1,261 @@
-<div class="container-fluid">
-    <div class="row d-flex align-items-center">
+<html lang="en">
 
-        <div class="col-md-6" id="img-bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cadastre-se como usuario comum</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
 
+<body>
+  <main class="d-flex align-items-center min-vh-100">
+    <div class="container">
+      <div class="card login-card mt-4 mb-4">
+        <div class="row no-gutters">
+
+          <div class="col-md-6">
+
+
+            <div class="row d-flex justify-content-center mt-4">
+
+            </div>
+            <div class="card-body">
+              <div class="brand-wrapper">
+                <img src="../../assets/img/APRESEAtivo 2.png" alt="logo" class="logo">
+              </div>
+              <p class="login-card-description">Cadastre-se como usuário</p>
+              <form>
+                <div class="form-group">
+                  <label for="email" class="sr-only">Nome Completo</label>
+                  <input [(ngModel)]='user.nomeCompleto' type="email" name="email" id="email" class="form-control" placeholder="Nome Completo*">
+                </div>
+
+                <div class="form-group">
+                  <label for="data" class="sr-only">Data de Nascimento</label>
+                  <input [(ngModel)]='user.dataNascimento' type="date" name="dataNascimento" id="dataNascimento" class="form-control"
+                    placeholder="Data de Nascimento">
+                </div>
+
+                <div class="form-group mb-4">
+                  <label for="email" class="sr-only">Email</label>
+                  <input [(ngModel)]='user.login' type="text" name="email" id="email" class="form-control" placeholder="Email*">
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="sr-only">Telefone</label>
+                  <input type="number" name="telefone" id="telefone" class="form-control"
+                    placeholder="Telefone* Ex: (11) 91234-5678)">
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="sr-only">CEP</label>
+                  <input type="number" name="email" id="cep" class="form-control" placeholder="CEP*">
+                </div>
+                <div class="form-group">
+                  <label for="endereco" class="sr-only">Endereço</label>
+                  <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço*">
+                </div>
+
+                
+                <div class="form-group">
+                  <label for="rne" class="sr-only">RNE</label>
+                  <input type="text" name="rne" id="rne" class="form-control" placeholder="RNE*">
+                </div>
+
+                <div class="form-group">
+                  <label for="cursos" class="sr-only">Cursos</label>
+                  <input type="text" name="cursos" id="cursos" class="form-control"
+                    placeholder="Tem interesse em uma área específia? Digite.">
+                </div>
+                <div class="form-group">
+                  <label for="idiomas" class="sr-only">Idiomas</label>
+                  <input type="text" name="idiomas" id="idiomas" class="form-control"
+                    placeholder="Idiomas que você fala e o nível de proficiência. (Ex: Inglês - Avançado).">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="expprof" class="sr-only">Experiência Profissional 1</label>
+                  <input type="text" name="expprof" id="expprof1" class="form-control"
+                    placeholder="Experiência Profissional 1">
+                </div>
+                <div class="form-group">
+                  <label for="expprof" class="sr-only">Experiência Profissional 2</label>
+                  <input type="text" name="email" id="expprof2" class="form-control"
+                    placeholder="Experiência Profissional 2">
+                </div>
+                <div class="form-group">
+                  <label for="expprof" class="sr-only">Experiência Profissional 3</label>
+                  <input type="text" name="expprof" id="expprof3" class="form-control"
+                    placeholder="Experiência Profissional 3">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="senha" class="sr-only">Senha</label>
+                  <input (input)='confirmSenha($event)' type="password" name="senha" id="senha" class="form-control" placeholder="Senha*">
+                </div>
+                <div class="form-group">
+                  <label for="senha" class="sr-only">Confirme a senha</label>
+                  <input [(ngModel)]='user.senha' type="password" name="senha" id="senha" class="form-control" placeholder="Senha*">
+                </div>
+                
+
+                <div class="textarea">
+                  <textarea type="text" name="textarea" id="textarea" class="form-textarea w-100 mb-4"
+                    placeholder="Digite seu objetivo profissional"></textarea>
+                </div>
+
+                <div class="row d-flex justify-content-center">
+                  
+                    <input routerLink='/home' name="Cancelar" id="Cancelar" class="btn login-btn mb-2"
+                      type="button" value="Cancelar">
+                  
+                  <input (click)='cadastrar()' name="Cadastrar" id="Cadastrar" class="btn login-btn mb-2"
+                    type="button" value="Cadastrar">
+
+                </div>
+
+              </form>
+              <nav class="login-card-footer-nav mt-12">
+
+                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                <label class="form-check-label" for="termosDeUso">
+                  <a data-bs-toggle="modal" data-bs-target="#termosDeUso" data-toggle="modal" data-target="#termosDeUso"
+                    data-toggle="modal" href="#">Li e Concordo com os Termos de Uso.</a>
+                </label>
+
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="https://images.pexels.com/photos/3786760/pexels-photo-3786760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="login" class="login-card-img">
+          </div>
         </div>
-
-        <div class="col-md-6">
-
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
-                    <h1 class="text-center mb-4">Continue seu cadastro</h1>
-
-                    <div class="form-group mb-4">
-                        <label for="cep">CEP : </label>
-                        <input class="form-control" type="text" name="cep" id="cep" placeholder="digite seu CEP">
-
-
-                    </div>
-
-
-                    <div class="form-group mb-4">
-                        <label for="cursos">Cursos: </label>
-                        <input class="form-control" type="text" name="cursos" id="cursos" placeholder="seus principais cursos">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="endereco">Endereço: </label>
-                        <input class="form-control" type="text" name="endereco" id="endereco" placeholder="insira seu endereço atual">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="experiencia1">Experiência profissional: </label>
-                        <input class="form-control" type="text" name="experiencia1" id="experiencia1" placeholder="insira a empresa e sua função">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="experiencia2">Experiência profissional: </label>
-                        <input class="form-control" type="text" name="experiencia2" id="experiencia2" placeholder="insira a empresa e sua função">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="experiencia3">Experiência profissional: </label>
-                        <input class="form-control" type="text" name="experiencia3" id="experiencia3" placeholder="insira a empresa e sua função">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="formacaoAcademica">Formação Academica: </label>
-                        <input class="form-control" type="text" name="formacaoAcademica" id="formacaoAcademica" placeholder="insira sua(as) formação(ções)">
-
-
-                    </div>
-
-
-                    <div class="form-group mb-4">
-                        <label for="idiomas">Idiomas: </label>
-                        <input class="form-control" type="text" name="idiomas" id="idiomas" placeholder="insira os idiomas que domina e o nivel de fluência">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="informacoesAdicionais">Informações adicionais: </label>
-                        <input class="form-control" type="text" name="informacoesAdicionais" id="informacoesAdicionais" placeholder="sinta-se a vontade para compartilhar o que quiser">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="numeroCasa">Numero da casa: </label>
-                        <input class="form-control" type="text" name="numeroCasa" id="numeroCasa" placeholder="insira o numero da residência">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="objetivoProfissional">Objetivo profissional: </label>
-                        <input class="form-control" type="text" name="objetivoProfissional" id="objetivoProfissional" placeholder="insira o seu objetivo profissional">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="rne">Objetivo profissional: </label>
-                        <input class="form-control" type="text" name="rne" id="rne" placeholder="insira o seu RNE">
-
-
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="telefone">Telefone: </label>
-                        <input class="form-control" type="text" name="telefone" id="telefone" placeholder="insira o seu melhor numero de telefone ou celular">
-
-
-                    </div>
-
-
-                    </div>
-
-            <hr class="mt-5 mb-5">
-
-            <p class="text-center">
-                Já tem uma conta ? <a> Entre </a>
-            </p>
-
-            <p class="text-center">
-                Entre em <a> contato</a> conosco!
-            </p>
-
-        </div>
-
+      </div>
 
     </div>
-</div>
+
+
+
+    <!-- MODAL -->
+
+    <div class="modal" id="termosDeUso" taria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center w-100">Termos de Uso - Gama &copy;</h5>
+
+           
+          </div>
+          <div class="modal-body text-justify d-flex justify-content-center">
+            <p><strong>TERMOS DE USO – PROJETO GAMA</strong> <br> <br>
+
+              O Projeto Gama &copy; é uma proposta de plataforma web com o intuito de aproximar empresas que possuam
+              oportunidades de carreira e queiram anunciar para pessoas estrangeiras* que buscam recolocação
+              profissional no Brasil. <br> <br>
+
+              É muito importante que você saiba como funciona nossa plataforma antes de começar a utilizá-la como
+              ferramente de busca, candidatura e monitoramento de vagas anunciadas por empresas parceiras. Estes Termos
+              de Uso regem o uso do site www.projetogama.com.br e seus aplicativos mobile. <br> <br>
+
+              Ao utilizar os nossos serviços, você concorda com estes Termos de Uso e com as condições da Política de
+              Privacidade, que definem a forma como são coletados, utilizados e armazenados seus dados e informações
+              pessoais. <br> <br>
+
+              <strong> 1. APLICABILIDADE. </strong> Estes Termo de Uso são aplicáveis aos usuários que desejam usar os
+              serviços da
+              plataforma para bucar oportunidades de carreira (“Candidatos”) e para as empresas que querem anunciar
+              vagas de emprego (“Empresas”). <br> <br>
+
+              <strong> 1.1. *Candidatos. </strong>strong> O uso desta plataforma pelos Candidatos é retrita a
+              profissionais residentes no Brasil e
+              que sejam de outra nacionalidade que não a brasileira. Para comprovar sua situação como estrangeiro, o
+              Candidato deverá completar o cadastro no Projeto Gama e apresentar os documentos solicitados. <br> <br>
+
+              <strong>1.2. Empresas. </strong>strong>As Empresas que tenham interesse em divulgar vagas com
+              oportunidades de carreira aos
+              Candidatos deverão fazer um cadastro no Projeto Gama, detalhando as condições da oportunidade de emprego.
+              Todas as vagas divulgadas serão destinadas a pessoas estrangiras, conforme qualificações apresentadas
+              pelos Candidatos. <br> <br>
+
+              <strong>2. CADASTRO, CURRÍCULO e VAGAS. </strong>strong> Para utilizar todos os recursos e funcionlidades
+              da plataforma todos os
+              usuários precisarão efetuar um cadastro ou como Candidato, e incluir seus dados e informações e preencher
+              o currículo disponível na plataforma (“Currículo”) ou realizar seu cadastro como Empresa e preencher os
+              requisitos necessários e informados na tela de cadastro e incluir as informações das oportunidades de
+              carreira (“Vagas”). A plataforma e suas funcionalidades de navegação, cadastramento de currículo,
+              utilização das ferramentas de busca, abertura e monitoramento e candidatura a Vagas desta plataforma são
+              GRATUITAS, podendo o candidato manter seu currículo ativo pelo período que desejar. <br> <br>
+
+              <strong>2.1. Cadastro. </strong>strong>Todos os usuários que utilizarem esta plataforma deverão se
+              cadastrar e preencher os
+              requisitos solicitados na tela de cadastro e criar uma senha pessoal e intransferível para acesso à
+              plataforma. Os Candidatos deverão ter idade mínima legal para se candidatar a uma Vaga anunciada (14 anos
+              ou mais no Brasil, a depender da Vaga anunciada). <br> <br>
+
+              <strong>2.2. Curríulo. </strong>strong> Os Candidatos precisarão criar um Currículo no Projeto Gama para
+              conseguir se candidatar a
+              uma Vaga anunciada. No Currículo, o Candidato precisa preencher seus dados e qualificação profissional.
+              <br> <br>
+
+              <strong>2.3. Vagas.</strong> As Empresas que tenham interesse em divulgar vagas com oportunidades de
+              carreira aos
+              Candidatos deverão fazer incluir as informações da Vaga e anunciar. <br> <br>
+
+              <strong>3. RESPONSABILIDADES.</strong> O Projeto Gama é uma plataforma com a finalidade de aproximar
+              Candidatos / Empresas
+              interessados em se candidatar / preencher Vagas de emprego. Desta forma, o Projeto Gama não se
+              responsabiliza pela condução dos processos seletivos de cada Empresa, pela comunicação entre os Canditatos
+              e as Empresas e nem atua como agente de monitoramento, fiscalização, edição ou aprovação de todo conteúdo
+              publicado. O Projeto Gama se compromete em manter um espaço web para divulgação de oportunidades de
+              emprego, não se responsabilizando pela efetiva participação do candidato, sua contratação ou pelas
+              informações divulgadas pelas Empresas. <br> <br>
+
+              <strong> 4. PROTEÇÃO DE DADOS PESSOAIS.</strong> Todas as disposições sobre coleta, uso e proteção de
+              dados pessoais estão
+              dispostas na nossa Política de Privacidade, disponível em: www.projetogama.com.br/politicadeprivacidade.
+              <br> <br>
+
+              <strong>5. PROPRIEDADE.</strong> O domínio www.projetogama.com.br e suas ramificações, bem como os
+              conteúdos das telas do
+              site são propriedade do Projeto Gama e estão protegidos pelas leis e tratados de propriedade intelectual.
+              Você não deverá usar indevidamente ou reproduzir, total ou parcialmente, tais conteúdos, sem que haja
+              expressa autorização. <br> <br>
+
+              <strong> 6. DISPOSIÇÕES FINAIS</strong> <br> <br>
+
+              Os usuários (Candidato e a Empresa) declaram expressamente que tomaram conhecimento destes Termos de Uso e
+              que avaliara, leram e concordaram com todas as disposições e cláusulas aqui descritas. <br> <br>
+
+              O Projeto Gama presta suporte técnico em caso de erro da plataforma, conforme horários e contatos
+              divulgados no site. <br> <br>
+
+              Estes Termos de Uso são regidas pelas leis vigentes na República Federativa do Brasil. Para dirimir
+              eventuais dúvidas ou questões relativas a estes Termos de Uso, as partes elegem o Foro da Comarca de São
+              Paulo/SP. <br> <br>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </main>
+
+</body>
+
+
+</html>
