@@ -43,7 +43,7 @@
                            <div class="card-body" *ngIf="tema.categoria == 'Curriculos'">
                                <!-- *ngIf="tema.categoria == 'Curriculos'" -->
                                <!-- *ngIf="item.titulo == user.nomeCompleto" -->
-                               <img class="d-flex card-img-top rounded-circle p-2 bd-highlight"  style="width: 90px;" src="{{item.usuario.foto}}" alt="Imagem de {{item.usuario.nomeCompleto}}">
+                               <img class="d-flex card-img-top rounded-circle p-2 bd-highlight"  style="width: 90px; height: 90px;" src="{{item.usuario.foto}}" alt="Imagem de {{item.usuario.nomeCompleto}}">
                                <h5 class="card-title m-0">{{item.titulo}}</h5>
                                <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small>
                                <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
