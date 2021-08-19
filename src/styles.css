@@ -12,8 +12,8 @@ html{
     font-size: 18pt;
 }
 
-.bg-refugee{
-  background-color: #eb4a0b
+.navbar-color{
+  background-color: #03658C;
 }
 
 
@@ -7356,11 +7356,11 @@ a.text-dark:hover, a.text-dark:focus {
     max-width: 100%;
     padding-left: 15px;
     padding-right: 15px; }
-  
+
 
 .oleez-footer {
-  background-color: #eb4a0b;
-  color: #000000; }
+  background-color: #03658C;
+  color: #fff; }
   .oleez-footer .footer-content {
     padding-top: 90px;
     padding-bottom: 45px; }

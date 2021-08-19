@@ -1,248 +1,489 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-refugee">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="../../assets/img/APRESEAtivo 2.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            Gama
-          </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<nav class="navbar navbar-fixed navbar-expand-lg navbar-color">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/img/APRESEAtivo 2.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Home</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Vagas</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link " href="#" routerLink = '/sobre' tabindex="-1" aria-disabled="true">Sobre nós</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link " href="#" routerLink = '/contato'tabindex="-1" aria-disabled="true">Contato</a>
-            </li>
-
-
-
-        </ul>
-        <form class="d-flex align-itens-end">
-        <button class="btn btn-outline-dark me-3" routerLink = '/cadastro' type="submit">Cadastre-se como usuário comum</button>
-          <button class="btn btn-outline-dark me-5" routerLink = '/empresa' type="submit">Ou como Empresa</button>
-          <button class="btn btn-outline-dark" routerLink = '/login' type="submit">Faça login</button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="text-white" href="#" routerLink='/home' tabindex="-1" aria-disabled="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-white m-3" href="#" routerLink='/contato' tabindex="-1" aria-disabled="true">Contato</a>
+        </li>
+      </ul>
+      <form class="d-flex align-itens-end">
+          <a class="text-white" routerLink = '/login' type="submit">Faça login</a>
         </form>
-      </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
 
 <section>
-    <div class="container">
-        <div id="oleezLandingCarousel" class="oleez-landing-carousel carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src="../../assets/img/folder4.jpg" alt="First slide" class="w-100">
-                    <div class="carousel-caption ">
-                        <h2><span>Gama</span></h2>
-                        <h2 data-animation="animated fadeInRight "><span >Dignidade e liberdade</span></h2>
-                        <a href="#!" class="carousel-item-link" data-animation="animated fadeInRight">CONHEÇA O PROJETO</a>
-                    </div>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+
+  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner mt-4">
+      <div class="carousel-item active">
+        <div class="mask flex-center">
+          <div class="container">
+            <div class="row align-items-center text-center justify-content-center">
+              <div class="col-md-6">
+                <h4>Se candidate a vagas
+                  em empresas que se importam com você.</h4>
+                <p>Crie uma conta para ver as oportunidades.</p>
+                <button routerLink = '/cadastro'>Sou usuário</button>
+                <button routerLink = '/empresa'>Sou empresa</button>
+
+
+              </div>
+              <div class="col-md-6">
+                <div class="row d-flex justify-content-center">
+                  <img src="https://i.imgur.com/JCfKFqz.png">
                 </div>
-                <div class="carousel-item">
-                    <img src="../../assets/img/folder3.jpg" alt="Second slide" class="w-100">
-                    <div class="carousel-caption ">
-                        <h2 data-animation="animated fadeInRight"><span>Encontre</span></h2>
-                        <h2 data-animation="animated fadeInRight"><span>uma oportunidade</span></h2>
-                        <a href="#!" class="carousel-item-link" data-animation="animated fadeInRight">CADASTRAR</a>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="carousel-item">
+        <div class="mask flex-center">
+          <div class="container">
+            <div class="row align-items-center text-center justify-content-center">
+              <div class="col-md-6">
+                <h4>Encontre oportunidades.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi qui nostrum vel dolore aut
+                  quibusdam praesentium soluta voluptate assumenda, pariatur dolorem. Repellendus nulla omnis dolorum,
+                  saepe corrupti illum repudiandae qui</p>
+
+
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex justify-content-center">
+
+                  <img src="https://i.imgur.com/JCfKFqz.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="mask flex-center">
+          <div class="container">
+            <div class="row align-items-center text-center justify-content-center">
+              <div class="col-md-6">
+                <h4>Conheça ONGs e cursos disponíveis.</h4>
+                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum necessitatibus praesentium
+                  voluptatum deleniti atque corrupti.</p>
+
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="row d-flex justify-content-center">
+
+                  <img src="https://i.imgur.com/dBmFftG.png">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span
+        class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a
+      class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span
+        class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+  </div>
+  <!--slide end--> >
 </section>
 
+
 <main class="blog-standard">
-    <div class="container">
-        <h1 class="oleez-page-title wow fadeInUp" id="ongs">Ongs</h1>
-        <div class="row">
-                <div class="col-md-8">
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/camp.jpg" alt="endeleza internacional" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Endeleza Internacional</h4>
-                        <p class="post-excerpt">São uma organização sem fins lucrativos que tem como objetivo promover o desenvolvimento humano e comunitário através de três grandes pilares: a educação, o empoderamento e a sustentabilidade.</p>
-                        <a href="https://endeleza.org/?gclid=CjwKCAjwx8iIBhBwEiwA2quaqzlakR_0VWTodjBKgl_n8jkF9PVREv5JEHiorrpHj1xi3HuMJVIQrRoCYu0QAvD_BwE" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/refugiado.jpg" alt="blog post" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Empresas com refugiados</h4>
-                        <p class="post-excerpt">Tire suas dúvidas sobre a contratação de refugiados, entre em contato com uma empresa de recrutamento, encontre a ONG mais próxima de você para anunciar sua vaga e conheça o progama de interiorização.</p>
-                        <a href="https://www.empresascomrefugiados.com.br/contratacao" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/adus4.jpg" alt="endeleza internacional" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Instituto ADUS </h4>
-                        <p class="post-excerpt">O Instituto Adus é uma ONG que promove a integração de refugiados na sociedade brasileira há mais de dez anos.</p>
-                        <a href="https://adus.org.br/" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/welcome2.jpg" alt="endeleza internacional" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Agência da ONU para refugiados</h4>
-                        <p class="post-excerpt">O trabalho do ACNUR, a Agência da ONU para Refugiados, no Brasil é pautado pelos mesmos princípios e funções que em qualquer outro país: proteger os refugiados e promover soluções duradouras para seus problemas.</p>
-                        <a href="https://www.acnur.org/portugues/" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <h1 class="oleez-page-title wow fadeInUp" id="cursos">Cursos</h1>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/welcome.jpg" alt="blog post" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">A OIM - Organização Internacional para as Migrações, oferece cursos gratuitos para imigrantes</h4>
-                        <p class="post-excerpt">Conheça os cursos online e gratuitos
-                            • Crianças e Adolescentes Migrantes
-
-                            • Direitos dos imigrantes e orientações para o atendimento
-
-                            • MigraCidades: Aprimorando a Governança Migratória Local
-
-                            • Migração e Saúde
-
-                            • O Novo Direito Migratório Brasileiro
-
-                            • Português para Refugiados e Migrantes
-
-                            • Proteção Socioassistencial a Migrantes em Situação de Vulnerabilidade ou Violação a Direitos
-
-                            • Uma Introdução às Migrações Internacionais no Brasil Contemporâneo</p>
-                        <a href="https://brazil.iom.int/cursos-oferecidos" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/google2.jpg" alt="endeleza internacional" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Google oferece cursos gratuitos</h4>
-                        <p class="post-excerpt">Encontre diversos conteúdos de aprendizagem gratuitos que ajudarão a expandir seus negócios ou alavancar sua carreira. Você pode selecionar módulos individuais ou fazer um curso inteiro, se preferir.</p>
-                        <a href="https://learndigital.withgoogle.com/ateliedigital/courses?utm_medium=atelie_paid&utm_source=sem&utm_campaign=wt21&utm_content=click:sem:texto:keywords::cursos&gclid=CjwKCAjwx8iIBhBwEiwA2quaq6Vn5CBgqDAjjRqHaw3pYRwVmcNN4IS7biuJoANtaGS3reogKXgiChoCpQAQAvD_BwE" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <h1 class="oleez-page-title wow fadeInUp" id="informativos">Infos</h1>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/trabforc.jpg" alt="blog post" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Entenda o que é a escravidão moderna</h4>
-                        <p class="post-excerpt">O que significa trabalho escravo contemporâneo? Como denunciar?</p>
-                        <a href="https://www.uol.com.br/ecoa/ultimas-noticias/2021/01/26/o-que-significa-trabalho-escravo-contemporaneo.htm" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
+  <div class="container">
 
 
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/opressed.jpg" alt="endeleza internacional" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">Justiça determina que Funai assuma a responsabilidade por imigrantes</h4>
-                        <p class="post-excerpt">Decisão reafirma que a Funai e a União não podem distinguir o tratamento dado a indígenas brasileiros e estrangeiros, como ocorre com imigrantes venezuelanos</p>
-                        <a href="https://learndigital.withgoogle.com/ateliedigital/courses?utm_medium=atelie_paid&utm_source=sem&utm_campaign=wt21&utm_content=click:sem:texto:keywords::cursos&gclid=CjwKCAjwx8iIBhBwEiwA2quaq6Vn5CBgqDAjjRqHaw3pYRwVmcNN4IS7biuJoANtaGS3reogKXgiChoCpQAQAvD_BwE" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
-
-                    <article class="blog-post wow fadeInUp">
-                        <img src="../../assets/img/50.jpg" alt="endeleza internacional" class="post-thumbnail">
-                        <p class="post-date">Agosto 10, 2021</p>
-                        <h4 class="post-title">50 for freedom - A escravidão moderna: mitos e fatos</h4>
-                        <p class="post-excerpt">A escravidão moderna está em toda parte, mas passa despercebida pela maioria de nós. Descubra a verdade por trás desses mitos e participe da campanha para acabar de vez com a escravidão moderna.</p>
-                        <a href="https://50forfreedom.org/pt/a-escravidao-moderna-mitos-e-fatos/" target="_blank" class="post-permalink">LEIA MAIS</a>
-                    </article>
+    <div>
+      <ul class="categoria-lista mb-5">
+        <li><a href="#ongs">ONG's</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#informativos">Informações</a></li>
+      </ul>
+    </div>
 
 
+    <section class="features-overview" id="features-section">
+      <div class="col-md-12 content-header text-center">
+        <div class="row d-flex justify-content-center">
+          <h2 class="mt-5">Como funciona?</h2>
+
+        </div>
+      </div>
+      <div class="d-md-flex justify-content-between p-5">
+        <div class="grid-margin d-flex justify-content-start">
+          <div class="features-width">
+
+            <h5 class="py-3 text-center">Crie uma conta.</h5>
+            <p class="text-muted p-3">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer
+              turpis,
+              suspendisse.</p>
+
+          </div>
+        </div>
+        <div class="grid-margin d-flex justify-content-center">
+          <div class="features-width">
+
+            <h5 class="py-1 text-center">Empresa, publique vagas. <br> Usuários, se candidatam.</h5>
+            <p class="text-muted p-4">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer
+              turpis,
+              suspendisse.</p>
+
+          </div>
+        </div>
+        <div class="grid-margin d-flex justify-content-end">
+          <div class="features-width">
+
+            <h5 class="py-3 text-center">Match!</h5>
+            <p class="text-muted p-3">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer
+              turpis,
+              suspendisse.</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-
+    <div class="areas">
+      <div class="row d-flex justify-content-center grid-margin">
+        <div class="col-md-12 text-center pb-5">
+          <h2>Áreas que mais contratam</h2>
+          <h6 class="section-subtitle text-muted">De acordo com os dados levantados pela Gama, as áreas que nossos
+            usuários mais conseguem empregos facilmente são:</h6>
+        </div>
+        <div class="col-md-12 col-lg-3 stretch-card mb-5">
+          <div class="card color-cards">
+            <div class="card-body p-0">
+              <div class="text-center card-contents">
+                <div class="card-image">
+                  <img src="https://i.imgur.com/9zKlD9U.png" width="250" height="250" class="case-studies-card-img"
+                    alt="">
                 </div>
-                <div class="col-md-4">
-
-                    <div class="sidebar-widget wow fadeInUp">
-                        <h5 class="widget-title">Categorias</h5>
-                        <div class="widget-content">
-                            <ul class="category-list">
-                                <li><a href="#ongs">Ongs</a></li>
-                                <li><a href="#cursos">Cursos</a></li>
-                                <li><a href="#informativos">Informações</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="sidebar-widget wow fadeInUp">
-                        <h5 class="widget-title">Tags</h5>
-                        <div class="widget-content">
-                            <a href="#!" class="post-tag">refugiados</a>
-                            <a href="#!" class="post-tag">Esclarecimentos</a>
-                            <a href="#!" class="post-tag">Duvidas</a>
-                            <a href="#!" class="post-tag">Imigrantes</a>
-                            <a href="#!" class="post-tag">Oportunidades</a>
-                            <a href="#!" class="post-tag">Gratuito</a>
-                        </div>
-                    </div>
-
-
-                </div>
+              </div>
+              <div class="card-details text-center mt-4 mb-4">
+                <h6 class="m-0 pb-1">Tecnologia</h6>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card color-cards">
+            <div class="card-body p-0">
+              <div class="bg-warning text-center card-contents">
+                <div class="card-image">
+                  <img src="https://i.imgur.com/Hi6wQo2.png" width="250" height="250" class="case-studies-card-img"
+                    alt="">
+                </div>
+
+              </div>
+              <div class="card-details text-center mt-4 mb-4">
+                <h6 class="m-0 pb-1">Manutenção</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card color-cards">
+            <div class="card-body p-0">
+              <div class="bg-info text-center card-contents">
+                <div class="card-image">
+                  <img src="https://i.imgur.com/2TaoJll.png" width="250" height="250" class="case-studies-card-img"
+                    alt="">
+                </div>
+
+              </div>
+              <div class="card-details text-center mt-4 mb-4">
+                <h6 class="m-0 pb-1">Culinária</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 stretch-card" data-aos="zoom-in" data-aos-delay="600">
+          <div class="card color-cards">
+            <div class="card-body p-0">
+              <div class="bg-success text-center card-contents">
+                <div class="card-image">
+                  <img src="https://i.imgur.com/dX6qp5T.png" width="250" height="250" class="case-studies-card-img"
+                    alt="">
+                </div>
+
+              </div>
+              <div class="card-details text-center mt-4 mb-4">
+                <h6 class="m-0 pb-1">Atendimento Bilíngue</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relatos">
+      <div class="col-md-12 text-center pb-5 mt-5">
+        <h2>O que dizem nossos usuários?</h2>
+      </div>
+
+
+
+
+      <div class="row d-flex justify-content-center">
+        <!-- Team Member 1 -->
+        <div class="col-xl-3 col-md-8 mb-4">
+          <div class="card border-0 shadow">
+            <img src="../../assets/img/kenia-mulher.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit nostrum blanditiis soluta
+                  modi
+                  voluptates fugit deleniti corrupti quod non! Ab eligendi sequi ipsum officiis sint iste aut architecto
+                  quis.</p>
+                <h6 class="card-title pt-3">Imani Mwangi (Kenia)</h6>
+                <h6 class="customer-designation text-muted m-0">Tech Recruiter</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-0 shadow">
+            <img src="../../assets/img/ruanda-homem.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit nostrum blanditiis soluta
+                  modi
+                  voluptates fugit deleniti corrupti quod non! Ab eligendi sequi ipsum officiis sint iste aut architecto
+                  quis.</p>
+                <h6 class="card-title pt-3">Jamal Klongo (Ruanda)</h6>
+                <h6 class="customer-designation text-muted m-0">Eletricista de Manutenção</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-0 shadow">
+            <img src="../../assets/img/homem-bolivia.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit nostrum blanditiis soluta
+                  modi
+                  voluptates fugit deleniti corrupti quod non! Ab eligendi sequi ipsum officiis sint iste aut architecto
+                  quis.</p>
+                <h6 class="card-title pt-3">Orlando Cruz Sierra (Bolívia)</h6>
+                <h6 class="customer-designation text-muted m-0">Auxiliar Administrativo</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-0 shadow">
+            <img src="../../assets/img/mulher-afega.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit nostrum blanditiis soluta
+                  modi
+                  voluptates fugit deleniti corrupti quod non! Ab eligendi sequi ipsum officiis sint iste aut architecto
+                  quis.</p>
+                <h6 class="card-title pt-3">Aisha Kamir (Afeganistão)</h6>
+                <h6 class="customer-designation text-muted m-0">Professora de Idiomas</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <h2 class="oleez-page-title wow fadeInUp text-center mt-5" id="ongs">ONGs</h2>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/camp.jpg" alt="endeleza internacional" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Endeleza Internacional</h4>
+            <p class="post-excerpt">São uma organização sem fins lucrativos que tem como objetivo promover o
+              desenvolvimento humano e comunitário através de três grandes pilares: a educação, o empoderamento e a
+              sustentabilidade.</p>
+            <a href="https://endeleza.org/?gclid=CjwKCAjwx8iIBhBwEiwA2quaqzlakR_0VWTodjBKgl_n8jkF9PVREv5JEHiorrpHj1xi3HuMJVIQrRoCYu0QAvD_BwE"
+              target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/refugiado.jpg" alt="blog post" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Empresas com refugiados</h4>
+            <p class="post-excerpt">Tire suas dúvidas sobre a contratação de refugiados, entre em contato com uma
+              empresa
+              de recrutamento, encontre a ONG mais próxima de você para anunciar sua vaga e conheça o progama de
+              interiorização.</p>
+            <a href="https://www.empresascomrefugiados.com.br/contratacao" target="_blank" class="post-permalink">LEIA
+              MAIS</a>
+          </article>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/adus4.jpg" alt="endeleza internacional" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Instituto ADUS </h4>
+            <p class="post-excerpt">O Instituto Adus é uma ONG que promove a integração de refugiados na sociedade
+              brasileira há mais de dez anos.</p>
+            <a href="https://adus.org.br/" target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/welcome2.jpg" alt="endeleza internacional" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Agência da ONU para refugiados</h4>
+            <p class="post-excerpt">O trabalho do ACNUR, a Agência da ONU para Refugiados, no Brasil é pautado pelos
+              mesmos princípios e funções que em qualquer outro país: proteger os refugiados e promover soluções
+              duradouras para seus problemas.</p>
+            <a href="https://www.acnur.org/portugues/" target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+        </div>
+
+        <div class="col-md-12">
+          <h1 class="oleez-page-title wow fadeInUp" id="cursos">Cursos</h1>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/welcome.jpg" alt="blog post" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">A OIM - Organização Internacional para as Migrações, oferece cursos gratuitos para
+              imigrantes</h4>
+            <p class="post-excerpt">Conheça os cursos online e gratuitos
+              • Crianças e Adolescentes Migrantes
+
+              • Direitos dos imigrantes e orientações para o atendimento
+
+              • MigraCidades: Aprimorando a Governança Migratória Local
+
+              • Migração e Saúde
+
+              • O Novo Direito Migratório Brasileiro
+
+              • Português para Refugiados e Migrantes
+
+              • Proteção Socioassistencial a Migrantes em Situação de Vulnerabilidade ou Violação a Direitos
+
+              • Uma Introdução às Migrações Internacionais no Brasil Contemporâneo</p>
+            <a href="https://brazil.iom.int/cursos-oferecidos" target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/google2.jpg" alt="endeleza internacional" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Google oferece cursos gratuitos</h4>
+            <p class="post-excerpt">Encontre diversos conteúdos de aprendizagem gratuitos que ajudarão a expandir seus
+              negócios ou alavancar sua carreira. Você pode selecionar módulos individuais ou fazer um curso inteiro, se
+              preferir.</p>
+            <a href="https://learndigital.withgoogle.com/ateliedigital/courses?utm_medium=atelie_paid&utm_source=sem&utm_campaign=wt21&utm_content=click:sem:texto:keywords::cursos&gclid=CjwKCAjwx8iIBhBwEiwA2quaq6Vn5CBgqDAjjRqHaw3pYRwVmcNN4IS7biuJoANtaGS3reogKXgiChoCpQAQAvD_BwE"
+              target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+
+          <h1 class="oleez-page-title wow fadeInUp" id="informativos">Informações</h1>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/trabforc.jpg" alt="blog post" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Entenda o que é a escravidão moderna</h4>
+            <p class="post-excerpt">O que significa trabalho escravo contemporâneo? Como denunciar?</p>
+            <a href="https://www.uol.com.br/ecoa/ultimas-noticias/2021/01/26/o-que-significa-trabalho-escravo-contemporaneo.htm"
+              target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/opressed.jpg" alt="endeleza internacional" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">Justiça determina que Funai assuma a responsabilidade por imigrantes</h4>
+            <p class="post-excerpt">Decisão reafirma que a Funai e a União não podem distinguir o tratamento dado a
+              indígenas brasileiros e estrangeiros, como ocorre com imigrantes venezuelanos</p>
+            <a href="https://learndigital.withgoogle.com/ateliedigital/courses?utm_medium=atelie_paid&utm_source=sem&utm_campaign=wt21&utm_content=click:sem:texto:keywords::cursos&gclid=CjwKCAjwx8iIBhBwEiwA2quaq6Vn5CBgqDAjjRqHaw3pYRwVmcNN4IS7biuJoANtaGS3reogKXgiChoCpQAQAvD_BwE"
+              target="_blank" class="post-permalink">LEIA MAIS</a>
+          </article>
+
+          <article class="blog-post wow fadeInUp">
+            <img src="../../assets/img/50.jpg" alt="endeleza internacional" class="post-thumbnail">
+            <p class="post-date">Agosto 10, 2021</p>
+            <h4 class="post-title">50 for freedom - A escravidão moderna: mitos e fatos</h4>
+            <p class="post-excerpt">A escravidão moderna está em toda parte, mas passa despercebida pela maioria de nós.
+              Descubra a verdade por trás desses mitos e participe da campanha para acabar de vez com a escravidão
+              moderna.</p>
+            <a href="https://50forfreedom.org/pt/a-escravidao-moderna-mitos-e-fatos/" target="_blank"
+              class="post-permalink">LEIA MAIS</a>
+          </article>
+
+        </div>
+
+      </div>
     </div>
 </main>
 
 <footer class="oleez-footer ">
-    <div class="container">
-        <div class="footer-content">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="../../assets/img/APRESEAtivo 2.png" alt="oleez" class="footer-logo">
-                    <p class="footer-intro-text"></p>
-                    <nav class="footer-social-links">
-                        <a href="">Home</a>
-                    </nav>
-                    <nav class="footer-social-links">
-                        <a href="">Vagas</a>
-                    </nav>
-                    <nav class="footer-social-links">
-                        <a href="">Sobre nós</a>
-                    </nav>
-                    <nav class="footer-social-links">
-                        <a href="">Contato</a>
-                    </nav>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-6 footer-widget-text">
-                            <h6 class="widget-title">TELEFONE</h6>
-                            <p class="widget-content">+55 (11) 1234-4567</p>
-                        </div>
-                        <div class="col-md-6 footer-widget-text">
-                            <h6 class="widget-title">E-MAIL</h6>
-                            <p class="widget-content">projetogama@contato.com</p>
-                        </div>
-                        <div class="col-md-6 footer-widget-text">
-                            <h6 class="widget-title">ENDEREÇO</h6>
-                            <p class="widget-content">Rua Cônego Eugênio Leite, 623 <br> Brasil, São Paulo</p>
-                        </div>
-
-                    </div>
-                </div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../../assets/img/APRESEAtivo 2.png" alt="oleez" class="footer-logo">
+          <p class="footer-intro-text"></p>
+          <nav class="footer-social-links">
+            <a href="">Home</a>
+          </nav>
+          <nav class="footer-social-links">
+            <a href="">Vagas</a>
+          </nav>
+          <nav class="footer-social-links">
+            <a href="">Sobre nós</a>
+          </nav>
+          <nav class="footer-social-links">
+            <a href="">Contato</a>
+          </nav>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6 footer-widget-text">
+              <h6 class="widget-title">TELEFONE</h6>
+              <p class="widget-content">+55 (11) 1234-4567</p>
             </div>
+            <div class="col-md-6 footer-widget-text">
+              <h6 class="widget-title">E-MAIL</h6>
+              <p class="widget-content">projetogama@contato.com</p>
+            </div>
+            <div class="col-md-6 footer-widget-text">
+              <h6 class="widget-title">ENDEREÇO</h6>
+              <p class="widget-content">Rua Cônego Eugênio Leite, 623 <br> Brasil, São Paulo</p>
+            </div>
+
+          </div>
         </div>
-        <div class="footer-text d-flex justify-content-center">
-            <p class="mb-md-0">© Projeto Gama - Todos os direitos reservados.</p>
-        </div>
+      </div>
     </div>
+    <div class="footer-text d-flex justify-content-center">
+      <p class="mb-md-0">© Projeto Gama - Todos os direitos reservados.</p>
+    </div>
+  </div>
 </footer>
-
-
-

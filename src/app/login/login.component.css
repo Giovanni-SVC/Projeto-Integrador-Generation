@@ -3,17 +3,17 @@ body {
     background-color: #03658C;
     min-height: 100vh;
   }
-  
+
   .brand-wrapper {
-    margin-bottom: 19px; 
+    margin-bottom: 19px;
     display: flex;
     justify-content: center;
   }
     .brand-wrapper .logo {
-      height: 37px; 
-      
+      height: 37px;
+
   }
-  
+
   .login-card {
     border: 0;
     border-radius: 27.5px;
@@ -25,30 +25,30 @@ body {
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover; 
+      object-fit: cover;
     }
     .login-card .card-body {
-      padding: 85px 60px 60px; 
-      
+      padding: 85px 60px 60px;
+
     }
     .container .card-body{
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-  
+
     .card-body form{
       width: 100%;
     }
-     
+
     .login-card-description {
       font-size: 25px;
       color: #000;
       font-weight: normal;
-      margin-bottom: 23px; 
+      margin-bottom: 23px;
     }
     .login-card form {
-      max-width: 326px; 
+      max-width: 326px;
     }
     .login-card .form-control {
       border: 1px solid #000000;
@@ -58,22 +58,22 @@ body {
       min-height: 45px;
       font-size: 13px;
       line-height: 15;
-      font-weight: normal; 
+      font-weight: normal;
     }
       .login-card .form-control::-webkit-input-placeholder {
-        color: #919aa3; 
+        color: #919aa3;
       }
       .login-card .form-control::-moz-placeholder {
-        color: #919aa3; 
+        color: #919aa3;
       }
       .login-card .form-control:-ms-input-placeholder {
-        color: #919aa3; 
+        color: #919aa3;
       }
       .login-card .form-control::-ms-input-placeholder {
-        color: #919aa3; 
+        color: #919aa3;
       }
       .login-card .form-control::placeholder {
-        color: #919aa3; 
+        color: #919aa3;
       }
     .login-card .login-btn {
       padding: 13px 20px 12px;
@@ -87,7 +87,8 @@ body {
       .login-card .login-btn:hover {
         border: 1px solid #000;
         background-color: transparent;
-        color: #000; }
+        color: #000;
+    }
     .login-card{
       font-size: 14px;
       color: #919aa3;
@@ -96,7 +97,7 @@ body {
       font-size: 16px;
       color: #0d2366;
       margin-bottom: 60px; }
-      
+
     .login-card-footer-nav a {
       font-size: 14px;
       color: #919aa3; }

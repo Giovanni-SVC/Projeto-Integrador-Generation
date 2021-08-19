@@ -1,0 +1,44 @@
+
+p{
+  text-align: center !important;
+  text-align: justify !important;
+}
+
+.social-network li {
+  list-style: none;
+
+
+}
+
+.social-network .fa{
+  margin-top: 20px;
+  font-size: 35pt;
+  color: #000000;
+  padding: 10px;
+  margin-left: 12px;
+
+
+}
+
+
+.icones{
+  align-self: center;
+  margin: 0;
+  text-align: center;
+
+}
+
+.texto-rodape{
+  color: #000000;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.fa-linkedin-square:hover{
+  color: #0072b1 !important;
+}
+
+.fa-github:hover{
+  color: #727272;
+}
