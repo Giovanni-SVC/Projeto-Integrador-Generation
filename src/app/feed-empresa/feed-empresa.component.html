@@ -38,12 +38,12 @@
                 <div class="tab-pane fade show active" id="postagensPorTema"  role="tabpanel" aria-labelledby="nav-postagensPorTema-tab">
                     <!-- Exibir somente curriculos -->
                     <div class="card-row" *ngFor='let tema of listaTemas'>
-                       <div class="card text-center" style="width: 38rem;"
+                       <div class="card text-center rounded mb-2" style="width: 38rem;"
                            *ngFor='let item of tema.postagem | orderBy : key : reverse'>
                            <div class="card-body" *ngIf="tema.categoria == 'Curriculos'">
                                <!-- *ngIf="tema.categoria == 'Curriculos'" -->
                                <!-- *ngIf="item.titulo == user.nomeCompleto" -->
-                               <img class="card-img-top" style="width: 48px;" src="{{item.usuario.foto}}" alt="Imagem de {{item.usuario.nomeCompleto}}">
+                               <img class="d-flex card-img-top rounded-circle p-2 bd-highlight"  style="width: 90px;" src="{{item.usuario.foto}}" alt="Imagem de {{item.usuario.nomeCompleto}}">
                                <h5 class="card-title m-0">{{item.titulo}}</h5>
                                <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small>
                                <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
