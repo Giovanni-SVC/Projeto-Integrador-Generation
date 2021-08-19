@@ -14,9 +14,9 @@ export class SobreComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
-      this.router.navigate(['/home'])
-    }
+    // if(environment.token == ''){
+    //   this.router.navigate(['/home'])
+    // }
 
   }
 
