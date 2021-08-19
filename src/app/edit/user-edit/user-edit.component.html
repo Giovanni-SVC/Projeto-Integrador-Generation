@@ -2,6 +2,12 @@
   <div class="row  justify-content-center">
     <div class="col-md-10">
       <!-- Inicio do formulario -->
+
+      <div class="form-group">
+        <label for="foto">Link da Foto</label>
+        <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="sua foto">
+      </div>
+      
       <div class="form-group mb-4">
         <label for="nomeCompleto">Nome: </label>
         <input [(ngModel)]='user.nomeCompleto' class="form-control" type="text" name="nomeCompleto"
@@ -47,7 +53,7 @@
 
       <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-success mr-2 mb-2"  (click)='atualizar()'>Atualizar</button>
-        <button type="submit" class="btn btn-light mr-2 mb-2" routerLink='/info'>Cancelar</button>
+        <button type="submit" class="btn btn-light mr-2 mb-2" routerLink='/feed-user'>Cancelar</button>
       </div>
 
       <!-- Final do formulario -->

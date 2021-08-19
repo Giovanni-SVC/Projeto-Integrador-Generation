@@ -27,6 +27,9 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { FeedUserComponent } from './feed-user/feed-user.component';
+import { ViewCurriculoComponent } from './view-curriculo/view-curriculo.component';
+import { FeedEmpresaComponent } from './feed-empresa/feed-empresa.component';
 
 
 
@@ -50,7 +53,10 @@ import { SobreComponent } from './sobre/sobre.component';
     PostagemDeleteComponent,
     UserEditComponent,
     AlertasComponent,
-    SobreComponent
+    SobreComponent,
+    FeedUserComponent,
+    ViewCurriculoComponent,
+    FeedEmpresaComponent
 
   ],
   imports: [

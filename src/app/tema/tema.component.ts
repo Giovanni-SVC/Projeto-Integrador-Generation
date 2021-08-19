@@ -29,7 +29,7 @@ export class TemaComponent implements OnInit {
     if(environment.tipoUsuario != 'adm' && environment.tipoUsuario != 'empr'){
       // if( environment.tipoUsuario !='empr')
       this.alertas.showAlertDanger('acesso negado')
-      this.router.navigate(['/info'])
+      this.router.navigate(['/feed-user'])
     }
 
     this.findAllTemas()

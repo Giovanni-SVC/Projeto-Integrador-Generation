@@ -22,6 +22,7 @@ export class User {
     public rne: string
     public senha: string
     public telefone: string
+    public foto: string
     public postagem: Postagem[]
 
 }

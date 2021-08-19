@@ -31,6 +31,11 @@ export class UserEditComponent implements OnInit {
 
     if(environment.token == ''){
       this.router.navigate(['/home'])
+      // if(environment.tipoUsuario == 'normal'){
+      //   this.router.navigate(['/feed-user'])
+      // }else{
+      //   this.router.navigate(['/feed-empresa'])
+      // }
     }
 
     this.idUser = this.route.snapshot.params['id']
@@ -54,12 +59,17 @@ export class UserEditComponent implements OnInit {
       this.user = resp
       console.log(this.user)
       console.log(this.tipoUsuario)
-      this.router.navigate(['/info'])
+      if(environment.tipoUsuario == 'normal'){
+        this.router.navigate(['/feed-user'])
+      }else{
+        this.router.navigate(['/feed-user'])
+      }
       this.alertas.showAlertSuccess('Usuário atualizado com sucesso, faça o login novamente')
       environment.nome = ''
       environment.token = ''
       environment.id = 0
       environment.tipoUsuario = ''
+      environment.foto =''
       this.router.navigate(['/login'])
       })
     } else {

@@ -2,7 +2,7 @@
 
     <div class="row bg-secondary">
         <div class="col-md-12 text-white">
-            <a routerLink = '/info' class="text-white text-left" >
+            <a routerLink = '/feed-empresa' class="text-white text-left" >
             <i class="fa fa-angle-double-left" aria-hidden="true"></i> Inicio
             </a>
 
@@ -11,8 +11,18 @@
 
             <div class="row d-flex justify-content-center mt-4 mb-5">
                 <div class="col-md-3">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <input [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria" placeholder="digite a categoria do tema">
+                    </div> -->
+                    
+                    <!-- Modificação para limitar as categorias -->
+                    <div class="form-group">
+                        <select [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria">
+                            <option value="Vagas">Vagas</option>
+                            <option value="Curso">Cursos</option>
+                            <option value="Curriculos">Curriculos</option>
+              
+                          </select>
                     </div>
 
                     <div class="form-group">
