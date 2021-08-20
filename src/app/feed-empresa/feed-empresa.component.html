@@ -40,7 +40,7 @@
                     <div class="card-row" *ngFor='let tema of listaTemas'>
                        <div class="card text-center rounded mb-2" style="width: 38rem;"
                            *ngFor='let item of tema.postagem | orderBy : key : reverse'>
-                           <div class="card-body" *ngIf="tema.categoria == 'Curriculos'">
+                           <div class="card-body d-flex" *ngIf="tema.categoria == 'Curriculos'">
                                <!-- *ngIf="tema.categoria == 'Curriculos'" -->
                                <!-- *ngIf="item.titulo == user.nomeCompleto" -->
                                <img class="d-flex card-img-top rounded-circle p-2 bd-highlight"  style="width: 90px; height: 90px;" src="{{item.usuario.foto}}" alt="Imagem de {{item.usuario.nomeCompleto}}">
