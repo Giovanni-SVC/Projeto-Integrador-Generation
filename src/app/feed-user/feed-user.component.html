@@ -4,7 +4,7 @@
       <div class="profile-nav col-md-3 mt-2">
         <!-- Menu lateral -->
         <div class="user-heading round">
-          <a href="#">
+          <a>
             <img src="{{foto}}" alt="">
           </a>
           <h1>{{nome}}</h1>
@@ -19,14 +19,15 @@
 
           <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
 
-          <li><a (click)='findByIdUser()' data-toggle="tab" href="#minhasPostagens" role="tab"
-              aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
-              postagens</a></li>
+          <li><a  (click)='findByIdUser()' 
+            data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false"
+            >Minhas
+            postagens</a></li>
           <li><a [routerLink]="['/curriculo', idUser]">Editar Curriculo</a></li>
           <li><a [routerLink]="['/view-curriculo', idUser]">Visualizar Curriculo</a></li>
           <!-- pesquisa por titulo -->
           <div class="form-group">
-            <input type="text" class="from-control" id="titulo" placeholder="Digite o nome do titulo da postagem"
+            <input type="text" class="from-control" id="tituloPost" placeholder="Digite o nome do titulo da postagem"
               [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
           </div>
 
@@ -54,12 +55,12 @@
 
 
       <div class="col-md-9">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center " >
 
-          <div class="col-md-10 mb-5" *ngFor='let tema of listaTemas'>
-            <div class="card mt-2 pt-2 active pb-0 px-3" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+          <div class="col-md-10 mb-5 " *ngFor='let tema of listaTemas'>
+            <div class="card mt-2  pt-2  pb-0 px-3" *ngFor='let item of tema.postagem | orderBy : key : reverse' >
               <div class="card-body" *ngIf="tema.categoria != 'Curriculos'">
-                <div class="row d-flex justify-content-center">
+                <div class="row d-flex justify-content-center" >
                   <div class="col-12">
                     <h4 class="card-title "><b>{{item.titulo}}</b></h4>
                   </div>
@@ -75,15 +76,24 @@
               </div>
             </div>
           </div>
+          <!-- Minhas postagens -->
+          <!-- <div class="col-md-10 mb-5 tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+                <div class="card mt-2 pt-2  pb-0 px-3"
+                    *ngFor='let item of user.postagem | orderBy : key : reverse'>
+                    <div class="card-body">
+                        <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <small class="card-text">Tema: {{item.tema.descricao}}</small>
+                        <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
+                                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+                        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+                    </div>
+                </div>
+          </div> -->
+          <!-- Minhas postagens -->
         </div>
       </div>
-
-
-
-
-
-
-
+      </div>
 
     <!-- Feed -->
 
@@ -120,7 +130,7 @@
             <div class="form-group">
               <label for="tema">Escolha um tema ou
                 <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:</label>
-              <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+              <select  name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                 <option *ngFor='let item of listaTemas' value="{{item.id}}">
                   {{item.descricao}}</option>
 
