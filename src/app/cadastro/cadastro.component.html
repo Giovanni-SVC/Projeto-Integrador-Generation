@@ -34,8 +34,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="foto">Link da Foto</label>
-                  <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="sua foto">
+                  <label for="foto" class="sr-only">Link da Foto</label>
+                  <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
                 </div>
 
                 <div class="form-group">
@@ -64,7 +64,7 @@
                   <input [(ngModel)]='user.endereco' type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço*">
                 </div>
 
-                
+
                 <div class="form-group">
                   <label for="rne" class="sr-only">RNE</label>
                   <input [(ngModel)]='user.rne' type="text" name="rne" id="rne" class="form-control" placeholder="RNE*">
@@ -99,7 +99,7 @@
                 </div>
 
 
-                
+
 
                 <div class="textarea">
                   <textarea type="text" name="textarea" id="textarea" class="form-textarea w-100 mb-4"
@@ -111,7 +111,7 @@
                   <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
                     placeholder="Sua senha">
                 </div>
-      
+
                 <div class="form-group mb-4">
                   <label for="confirmar-senha">Repita sua senha: </label>
                   <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
@@ -119,10 +119,10 @@
                 </div>
 
                 <div class="row d-flex justify-content-center">
-                  
+
                     <input routerLink='/home' name="Cancelar" id="Cancelar" class="btn login-btn mb-2"
                       type="button" value="Cancelar">
-                  
+
                   <input (click)='cadastrar()' name="cadastrar" id="cadastrar" class="btn login-btn mb-2"
                     type="button" value="Cadastrar">
 
@@ -160,7 +160,7 @@
           <div class="modal-header">
             <h5 class="modal-title text-center w-100">Termos de Uso - Gama &copy;</h5>
 
-           
+
           </div>
           <div class="modal-body text-justify d-flex justify-content-center">
             <p><strong>TERMOS DE USO – PROJETO GAMA</strong> <br> <br>

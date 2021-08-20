@@ -1,144 +1,136 @@
 <div class="container">
-    <div id="main-wrapper">
-        <div class="row d-flex">
-            <div class="profile-nav col-md-3 mt-2">
-                <!-- Menu lateral -->
-                <div class="user-heading round">
-                    <a href="#">
-                        <img src="{{foto}}" alt="">
-                    </a>
-                    <h1>{{nome}}</h1>
-                    <p>{{tipoUsuario}}</p>
-                </div>
+  <div id="main-wrapper">
+    <div class="row d-flex">
+      <div class="profile-nav col-md-3 mt-2">
+        <!-- Menu lateral -->
+        <div class="user-heading round">
+          <a href="#">
+            <img src="{{foto}}" alt="">
+          </a>
+          <h1>{{nome}}</h1>
+          <p>{{tipoUsuario}}</p>
+        </div>
 
-                <ul class="nav">
-                
-                    <li><a data-toggle="tab"
-                        href="#postagensPorTema" role="tab" aria-controls="nav-postagensPorTema" aria-selected="true">Feed</a>
-                    </li>
-            
-                    <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
+        <ul class="nav">
 
-                    <li><a  (click)='findByIdUser()' 
-                    data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens" aria-selected="false"
-                    >Minhas
-                    postagens</a></li>
-                    <li><a [routerLink]="['/curriculo', idUser]">Editar Curriculo</a></li>
-                    <li><a [routerLink]="['/view-curriculo', idUser]">Visualizar Curriculo</a></li>
-                    <!-- pesquisa por titulo -->
-                      <div class="form-group">
-                          <input type="text" class="from-control" id="titulo"
-                              placeholder="Digite o nome do titulo da postagem" [(ngModel)]='tituloPost'
-                              (keyup)='findByTituloPostagem()'>
-                      </div>
-                              
-                      <!-- pesquisa por conteudo -->
-                          
-                      <div class="form-group">
-                          <input type="text" class="from-control" id="conteudo"  
-                              placeholder="Digite o nome do conteudo da postagem" [(ngModel)]='conteudo'
-                              (keyup)='findByConteudoPostagem()'>
-                      </div>
-                      <!-- pesquisa por tema -->
-                      <div class="form-group">
-                        <input type="text" class="from-control" id="cate" placeholder="Vagas ou Cursos" [(ngModel)]='categoria'
-                            (keyup)='findByCategoriaTema()'>
-                    </div>
-                    <!-- pesquisar por palavra-chave -->
-                    <!-- <div class="form-group">
+          <li><a data-toggle="tab" href="#postagensPorTema" role="tab" aria-controls="nav-postagensPorTema"
+              aria-selected="true">Feed</a>
+          </li>
+
+          <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
+
+          <li><a (click)='findByIdUser()' data-toggle="tab" href="#minhasPostagens" role="tab"
+              aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
+              postagens</a></li>
+          <li><a [routerLink]="['/curriculo', idUser]">Editar Curriculo</a></li>
+          <li><a [routerLink]="['/view-curriculo', idUser]">Visualizar Curriculo</a></li>
+          <!-- pesquisa por titulo -->
+          <div class="form-group">
+            <input type="text" class="from-control" id="titulo" placeholder="Digite o nome do titulo da postagem"
+              [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+          </div>
+
+          <!-- pesquisa por conteudo -->
+
+          <div class="form-group">
+            <input type="text" class="from-control" id="conteudo" placeholder="Digite o nome do conteudo da postagem"
+              [(ngModel)]='conteudo' (keyup)='findByConteudoPostagem()'>
+          </div>
+          <!-- pesquisa por tema -->
+          <div class="form-group">
+            <input type="text" class="from-control" id="cate" placeholder="Vagas ou Cursos" [(ngModel)]='categoria'
+              (keyup)='findByCategoriaTema()'>
+          </div>
+          <!-- pesquisar por palavra-chave -->
+          <!-- <div class="form-group">
                         <input type="text" class="from-control" id="palavraChave" placeholder=""
                             [(ngModel)]='palavraChave' (keyup)='findByPalavraChaveTema()'>
                     </div> -->
 
-                </ul>
-            </div>
-             <!-- End Menu lateral -->
-             <!-- Feed -->
-             <div class="col-md-9">
-                <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="postagensPorTema"  role="tabpanel" aria-labelledby="nav-postagensPorTema-tab">
-                    <!-- Exibir cursos e vagas -->
-                    <div class="card-row" *ngFor='let tema of listaTemas'>
-                        <div class="card text-center" style="width: 38rem;"
-                            *ngFor='let item of tema.postagem | orderBy : key : reverse'>
-                            <div class="card-body" *ngIf="tema.categoria != 'Curriculos'">
-                            <h5 class="card-title m-0">{{item.titulo}}</h5>
-                            <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small>
-                            <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
-                                    {{item.data | date: 'HH:mm'}}</small></p>
-                            <p class="card-text"><small class="text-muted">Autor: {{item.usuario.nomeCompleto}}</small>
-                            </p>
-                               <button data-toggle="modal" href ='' data-target="#Cadindatar-se" >Cadindatar-se</button>
-                           </div>
-                       </div>
-                   </div>
-             </div>
-             <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-                <div class="card-row">
-                    <div class="card text-center" style="width: 38rem;"
-                        *ngFor='let item of user.postagem | orderBy : key : reverse'>
-                        <div class="card-body">
-                            <h5 class="card-title m-0">{{item.titulo}}</h5>
-                            <small class="card-text">Tema: {{item.tema.descricao}}</small>
-                            <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
-                                    {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-                            <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                            <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!-- End Feed -->
-    </div>
-</div>
+        </ul>
+      </div>
+      <!-- End Menu lateral -->
 
-<!-- Modal -->
-<div class="modal fade" id="Cadindatar-se" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Curriculo</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+
+
+      <div class="col-md-9">
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-md-10 mb-5" *ngFor='let tema of listaTemas'>
+            <div class="card mt-2 pt-2 active pb-0 px-3" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+              <div class="card-body" *ngIf="tema.categoria != 'Curriculos'">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-12">
+                    <h4 class="card-title "><b>{{item.titulo}}</b></h4>
+                  </div>
+
+                  <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted"></small>
+                    <p class="card-text mt-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
+                        {{item.data | date: 'HH:mm'}}</small></p>
+                    <p class="card-text"><small class="text-muted">Publicado por: {{item.usuario.nomeCompleto}}</small>
+                    </p>
+                    <button class="btn-candidatar" data-toggle="modal" href=''
+                      data-target="#Cadindatar-se">Candidatar-se</button>
+                </div>
+              </div>
             </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="titulo">Nome da Empresa</label>
-                    <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
-                        placeholder="{{tema.categoria}}">
-                </div>
-
-                <div class="form-group">
-                    <label for="anexo">Anexo</label>
-                    <input [(ngModel)]='postagem.anexo' type="text" class="form-control" id="anexo"
-                        placeholder="Digite: {{idUser}}">
-                </div>
-
-                <div class="form-group">
-                    <label for="conteudo">Sobre você</label>
-                    <textarea [(ngModel)]='postagem.conteudo' name="texto" id="conteudo" class="form-control"
-                        rows="3"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="tema">Escolha um tema ou
-                        <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:</label>
-                    <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema'
-                        (change)='findByIdTema()'>
-                        <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                            {{item.descricao}}</option>
-
-                    </select>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success" data-dismiss="modal"
-                    (click)='publicar()'>Publicar</button>
-            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
+
+
+
+
+
+
+
+    <!-- Feed -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="Cadindatar-se" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Curriculo</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="titulo">Nome da Empresa</label>
+              <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+                placeholder="{{tema.categoria}}">
+            </div>
+
+            <div class="form-group">
+              <label for="anexo">Anexo</label>
+              <input [(ngModel)]='postagem.anexo' type="text" class="form-control" id="anexo"
+                placeholder="Digite: {{idUser}}">
+            </div>
+
+            <div class="form-group">
+              <label for="conteudo">Sobre você</label>
+              <textarea [(ngModel)]='postagem.conteudo' name="texto" id="conteudo" class="form-control"
+                rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="tema">Escolha um tema ou
+                <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:</label>
+              <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                  {{item.descricao}}</option>
+
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+          </div>
+        </div>
+      </div>
+    </div>
