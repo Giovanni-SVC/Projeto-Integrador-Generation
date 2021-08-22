@@ -26,7 +26,7 @@
               <div class="brand-wrapper">
                 <img src="../../assets/img/APRESEAtivo 2.png" alt="logo" class="logo">
               </div>
-              <p class="login-card-description">Cadastre-se como usuário</p>
+              <p class="login-card-description">Atualize os dados do seu currículo</p>
               <form>
                 <!-- <div class="form-group">
                   <label for="email" class="sr-only">Nome Completo</label>
@@ -90,10 +90,15 @@
                     placeholder="Digite seu objetivo profissional"></textarea>
                 </div>
 
-                <div class="form-group mb-4">
-                  <label for="confirmar-senha">Repita sua senha: </label>
-                  <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
-                    id="confirmarSenha" placeholder="Sua senha">
+                <div class="form-group">
+                  <label for="password" class="sr-only">Senha</label>
+                  <input (input)='confirmSenha($event)' type="password" name="senha" id="senha" class="form-control"
+                    placeholder="Senha">
+                </div>
+                <div class="form-group">
+                  <label for="text" class="sr-only">Confirme sua senha</label>
+                  <input [(ngModel)]='user.senha' type="password" name="confirmarSenha" id="confirmarsenha"
+                    class="form-control" placeholder="Confirme sua senha">
                 </div>
 
                 <div class="row d-flex justify-content-center">
@@ -127,115 +132,6 @@
       </div>
 
     </div>
-
-
-
-    <!-- MODAL -->
-
-    <div class="modal" id="termosDeUso" taria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center w-100">Termos de Uso - Gama &copy;</h5>
-
-
-          </div>
-          <div class="modal-body text-justify d-flex justify-content-center">
-            <p><strong>TERMOS DE USO – PROJETO GAMA</strong> <br> <br>
-
-              O Projeto Gama &copy; é uma proposta de plataforma web com o intuito de aproximar empresas que possuam
-              oportunidades de carreira e queiram anunciar para pessoas estrangeiras* que buscam recolocação
-              profissional no Brasil. <br> <br>
-
-              É muito importante que você saiba como funciona nossa plataforma antes de começar a utilizá-la como
-              ferramente de busca, candidatura e monitoramento de vagas anunciadas por empresas parceiras. Estes Termos
-              de Uso regem o uso do site www.projetogama.com.br e seus aplicativos mobile. <br> <br>
-
-              Ao utilizar os nossos serviços, você concorda com estes Termos de Uso e com as condições da Política de
-              Privacidade, que definem a forma como são coletados, utilizados e armazenados seus dados e informações
-              pessoais. <br> <br>
-
-              <strong> 1. APLICABILIDADE. </strong> Estes Termo de Uso são aplicáveis aos usuários que desejam usar os
-              serviços da
-              plataforma para bucar oportunidades de carreira (“Candidatos”) e para as empresas que querem anunciar
-              vagas de emprego (“Empresas”). <br> <br>
-
-              <strong> 1.1. *Candidatos. </strong>strong> O uso desta plataforma pelos Candidatos é retrita a
-              profissionais residentes no Brasil e
-              que sejam de outra nacionalidade que não a brasileira. Para comprovar sua situação como estrangeiro, o
-              Candidato deverá completar o cadastro no Projeto Gama e apresentar os documentos solicitados. <br> <br>
-
-              <strong>1.2. Empresas. </strong>strong>As Empresas que tenham interesse em divulgar vagas com
-              oportunidades de carreira aos
-              Candidatos deverão fazer um cadastro no Projeto Gama, detalhando as condições da oportunidade de emprego.
-              Todas as vagas divulgadas serão destinadas a pessoas estrangiras, conforme qualificações apresentadas
-              pelos Candidatos. <br> <br>
-
-              <strong>2. CADASTRO, CURRÍCULO e VAGAS. </strong>strong> Para utilizar todos os recursos e funcionlidades
-              da plataforma todos os
-              usuários precisarão efetuar um cadastro ou como Candidato, e incluir seus dados e informações e preencher
-              o currículo disponível na plataforma (“Currículo”) ou realizar seu cadastro como Empresa e preencher os
-              requisitos necessários e informados na tela de cadastro e incluir as informações das oportunidades de
-              carreira (“Vagas”). A plataforma e suas funcionalidades de navegação, cadastramento de currículo,
-              utilização das ferramentas de busca, abertura e monitoramento e candidatura a Vagas desta plataforma são
-              GRATUITAS, podendo o candidato manter seu currículo ativo pelo período que desejar. <br> <br>
-
-              <strong>2.1. Cadastro. </strong>strong>Todos os usuários que utilizarem esta plataforma deverão se
-              cadastrar e preencher os
-              requisitos solicitados na tela de cadastro e criar uma senha pessoal e intransferível para acesso à
-              plataforma. Os Candidatos deverão ter idade mínima legal para se candidatar a uma Vaga anunciada (14 anos
-              ou mais no Brasil, a depender da Vaga anunciada). <br> <br>
-
-              <strong>2.2. Curríulo. </strong>strong> Os Candidatos precisarão criar um Currículo no Projeto Gama para
-              conseguir se candidatar a
-              uma Vaga anunciada. No Currículo, o Candidato precisa preencher seus dados e qualificação profissional.
-              <br> <br>
-
-              <strong>2.3. Vagas.</strong> As Empresas que tenham interesse em divulgar vagas com oportunidades de
-              carreira aos
-              Candidatos deverão fazer incluir as informações da Vaga e anunciar. <br> <br>
-
-              <strong>3. RESPONSABILIDADES.</strong> O Projeto Gama é uma plataforma com a finalidade de aproximar
-              Candidatos / Empresas
-              interessados em se candidatar / preencher Vagas de emprego. Desta forma, o Projeto Gama não se
-              responsabiliza pela condução dos processos seletivos de cada Empresa, pela comunicação entre os Canditatos
-              e as Empresas e nem atua como agente de monitoramento, fiscalização, edição ou aprovação de todo conteúdo
-              publicado. O Projeto Gama se compromete em manter um espaço web para divulgação de oportunidades de
-              emprego, não se responsabilizando pela efetiva participação do candidato, sua contratação ou pelas
-              informações divulgadas pelas Empresas. <br> <br>
-
-              <strong> 4. PROTEÇÃO DE DADOS PESSOAIS.</strong> Todas as disposições sobre coleta, uso e proteção de
-              dados pessoais estão
-              dispostas na nossa Política de Privacidade, disponível em: www.projetogama.com.br/politicadeprivacidade.
-              <br> <br>
-
-              <strong>5. PROPRIEDADE.</strong> O domínio www.projetogama.com.br e suas ramificações, bem como os
-              conteúdos das telas do
-              site são propriedade do Projeto Gama e estão protegidos pelas leis e tratados de propriedade intelectual.
-              Você não deverá usar indevidamente ou reproduzir, total ou parcialmente, tais conteúdos, sem que haja
-              expressa autorização. <br> <br>
-
-              <strong> 6. DISPOSIÇÕES FINAIS</strong> <br> <br>
-
-              Os usuários (Candidato e a Empresa) declaram expressamente que tomaram conhecimento destes Termos de Uso e
-              que avaliara, leram e concordaram com todas as disposições e cláusulas aqui descritas. <br> <br>
-
-              O Projeto Gama presta suporte técnico em caso de erro da plataforma, conforme horários e contatos
-              divulgados no site. <br> <br>
-
-              Estes Termos de Uso são regidas pelas leis vigentes na República Federativa do Brasil. Para dirimir
-              eventuais dúvidas ou questões relativas a estes Termos de Uso, as partes elegem o Foro da Comarca de São
-              Paulo/SP. <br> <br>
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
 
 
 
