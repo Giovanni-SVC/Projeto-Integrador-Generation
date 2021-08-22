@@ -57,7 +57,6 @@ export class FeedEmpresaComponent implements OnInit {
     this.getAllTemas()
     this.getAllPostagens()
     this.findByCategoriaTema()
-    // this.findByTituloPostagem()
   }
 
   getAllTemas(){
@@ -124,7 +123,7 @@ export class FeedEmpresaComponent implements OnInit {
   }
 
   findByCategoriaTema(){
-    this.categoria = 'Curriculos'
+    // this.categoria = 'Curriculos'
     if(this.categoria == ''){
       this.getAllTemas()
       }else{

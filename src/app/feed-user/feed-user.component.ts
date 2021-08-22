@@ -64,7 +64,7 @@ export class FeedUserComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
-    this.findByCategoriaTema()
+    // this.findByCategoriaTema()
   }
 
   getAllTemas(){
@@ -131,7 +131,7 @@ export class FeedUserComponent implements OnInit {
   }
 
   findByCategoriaTema(){
-    this.categoria = 'Vagas'
+    // this.categoria = 'Vagas'
     if(this.categoria == ''){
       this.getAllTemas()
       }else{

@@ -35,10 +35,10 @@
       <div class="col-md-6">
 
         <div class="row d-flex justify-content-center tab-pane fade show active" id="postagensPorTema" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="col-md-10" *ngFor='let tema of listaTemas'>
-            <div class="card mt-2  pt-2  pb-0 px-3" style="width: 38rem;"
+          <div class="col-md-10 " *ngFor='let tema of listaTemas'>
+            <div class=" " style="width: 38rem"
               *ngFor='let item of tema.postagem | orderBy : key : reverse'>
-              <div class="card-body" *ngIf="tema.categoria == 'Curriculos'">
+              <div class="card-body card mt-2  pt-2  pb-0 px-3" *ngIf="tema.categoria == 'Curriculos'">
                 <!-- *ngIf="tema.categoria == 'Curriculos'" -->
                 <!-- *ngIf="item.titulo == user.nomeCompleto" -->
                 <div class="row d-flex">
@@ -103,7 +103,7 @@
           <div class="form-group">
             <label for="titulo">Título</label>
             <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
-              placeholder="Digite o título">
+              placeholder="Digite o título" autocomplete="off">
           </div>
 
           <div class="form-group">
@@ -116,7 +116,7 @@
             <label for="tema">Escolha um tema ou
               <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:</label>
             <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-              <option *ngFor='let item of listaTemas' value="{{item.id}}">
+              <option ng-Init="tema.categoria = 'vagas'" *ngFor='let item of listaTemas' value="{{item.id}}">
                 {{item.descricao}}</option>
 
             </select>
