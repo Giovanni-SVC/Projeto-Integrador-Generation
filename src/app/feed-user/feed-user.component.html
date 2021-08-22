@@ -13,15 +13,17 @@
 
         <ul class="nav">
 
-          <li><a data-toggle="tab" href="#postagensPorTema" role="tab" aria-controls="nav-postagensPorTema"
-              aria-selected="true">Feed</a>
+          <li><a id="nav-postagensPorTema-tab" data-toggle="tab"
+            href="#postagensPorTema" role="tab" aria-controls="nav-postagensPorTema" aria-selected="false">
+            feed</a>
           </li>
 
           <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
 
-          <li><a (click)='findByIdUser()' data-toggle="tab" href="#minhasPostagens" role="tab"
-              aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
-              postagens</a></li>
+          <li><a (click)='findByIdUser()' id="nav-minhasPostagens-tab"
+            data-toggle="tab" href="#minhasPostagens" role="tab" aria-controls="nav-minhasPostagens"
+            aria-selected="false">Minhas
+            postagens</a></li>
           <li><a [routerLink]="['/curriculo', idUser]">Editar Curriculo</a></li>
           <li><a [routerLink]="['/view-curriculo', idUser]">Visualizar Curriculo</a></li>
           <!-- pesquisa por titulo -->
@@ -50,12 +52,26 @@
         </ul>
       </div>
       <!-- End Menu lateral -->
-
-
-
-      <div class="col-md-9">
-        <div class="row d-flex justify-content-center ">
-
+      <!-- Feed -->
+      <div class="col-md-9 tab-content" id="nav-tabContent">
+        <!-- Minhas postagens -->
+        <div class="col-md-10 mb-5 tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+              <div class="card mt-2 pt-2  pb-0 px-3"
+                  *ngFor='let item of user.postagem | orderBy : key : reverse'>
+                  <div class="card-body">
+                      <h5 class="card-title m-0">{{item.titulo}}</h5>
+                      <small class="card-text">Tema: {{item.tema.descricao}}</small>
+                      <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
+                              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+                      <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                      <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+                  </div>
+              </div>
+        </div>
+        <!-- Minhas postagens -->
+        <!-- Post Tema -->
+        <div class="row d-flex justify-content-center tab-pane fade show active" id="postagensPorTema" role="tabpanel" aria-labelledby="nav-postagensPorTema-tab">
+          <div class="tab-content" id="nav-tabContent">
           <div class="col-md-10 " *ngFor='let tema of listaTemas'>
             <div class="" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
               <div class="card-body card mt-2  pt-2  pb-0 px-3" *ngIf="tema.categoria != 'Curriculos'">
@@ -75,27 +91,12 @@
               </div>
             </div>
           </div>
-          <!-- Minhas postagens -->
-          <!-- <div class="col-md-10 mb-5 tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-                <div class="card mt-2 pt-2  pb-0 px-3"
-                    *ngFor='let item of user.postagem | orderBy : key : reverse'>
-                    <div class="card-body">
-                        <h5 class="card-title m-0">{{item.titulo}}</h5>
-                        <small class="card-text">Tema: {{item.tema.descricao}}</small>
-                        <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
-                                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-                        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
-                    </div>
-                </div>
-          </div> -->
-          <!-- Minhas postagens -->
+          </div>
         </div>
+        <!-- End Post Tema -->
       </div>
+      <!-- End Feed -->
     </div>
-
-    <!-- Feed -->
-
 
     <!-- Modal -->
     <div class="modal fade" id="Cadindatar-se" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
