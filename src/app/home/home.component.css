@@ -1,8 +1,9 @@
-.navbar ul li {
+li a:hover{
   text-decoration: none !important;
+  list-style: none;
 }
 
-button{
+.btn-carrossel{
   color: #ffff;
   background-color: #03658C;
   border-radius: 50px;
@@ -11,11 +12,16 @@ button{
   border: none;
 }
 
-button:hover{
+.btn-carrossel:hover{
+  background-color: #ffffff;
   box-shadow: #000 0px 1px 10px;
   transition: .2s ease;
-  background-color: transparent;
   color: #000;
+}
+.btn-logar{
+  color: #ffff;
+  background-color: #03658C;
+  border: none;
 }
 
 .carousel{

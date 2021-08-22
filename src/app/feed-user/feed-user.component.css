@@ -144,6 +144,7 @@ body {
 
 .card{
   box-shadow: #000 0px 0px 5px;
+  margin-bottom: 30px !important;
 }
 
 .btn-candidatar{

@@ -30,23 +30,38 @@
               <form>
                 <div class="form-group">
                   <label for="email" class="sr-only">Nome Completo</label>
-                  <input [(ngModel)]='user.nomeCompleto' type="email" name="email" id="email" class="form-control" placeholder="Nome Completo*">
+                  <input [(ngModel)]='user.nomeCompleto' type="email" name="email" id="email" class="form-control"
+                    placeholder="Nome Completo*">
                 </div>
 
                 <div class="form-group">
                   <label for="foto" class="sr-only">Link da Foto</label>
-                  <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                  <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto"
+                    placeholder="Link da sua foto">
                 </div>
 
                 <div class="form-group">
                   <label for="data" class="sr-only">Data de Nascimento</label>
-                  <input [(ngModel)]='user.dataNascimento' type="date" name="dataNascimento" id="dataNascimento" class="form-control"
-                    placeholder="Data de Nascimento">
+                  <input [(ngModel)]='user.dataNascimento' type="date" name="dataNascimento" id="dataNascimento"
+                    class="form-control" placeholder="Data de Nascimento">
                 </div>
 
                 <div class="form-group mb-4">
                   <label for="email" class="sr-only">Email</label>
-                  <input [(ngModel)]='user.login' type="text" name="email" id="email" class="form-control" placeholder="Email*">
+                  <input [(ngModel)]='user.login' type="text" name="email" id="email" class="form-control"
+                    placeholder="Email*">
+                </div>
+
+                <div class="form-group">
+                  <label for="senha" class="sr-only"></label>
+                  <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+                    placeholder="Senha: ">
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmar-senha" class="sr-only"></label>
+                  <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
+                    id="confirmarSenha" placeholder="Repita sua senha: ">
                 </div>
 
                 <div class="form-group">
@@ -61,7 +76,8 @@
                 </div>
                 <div class="form-group">
                   <label for="endereco" class="sr-only">Endereço</label>
-                  <input [(ngModel)]='user.endereco' type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço*">
+                  <input [(ngModel)]='user.endereco' type="text" name="endereco" id="endereco" class="form-control"
+                    placeholder="Endereço*">
                 </div>
 
 
@@ -106,25 +122,16 @@
                     placeholder="Digite seu objetivo profissional"></textarea>
                 </div>
 
-                <div class="form-group mb-4">
-                  <label for="senha">Senha: </label>
-                  <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
-                    placeholder="Sua senha">
-                </div>
 
-                <div class="form-group mb-4">
-                  <label for="confirmar-senha">Repita sua senha: </label>
-                  <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmarSenha"
-                    id="confirmarSenha" placeholder="Sua senha">
-                </div>
 
                 <div class="row d-flex justify-content-center">
 
-                    <input routerLink='/home' name="Cancelar" id="Cancelar" class="btn login-btn mb-2"
-                      type="button" value="Cancelar">
 
-                  <input (click)='cadastrar()' name="cadastrar" id="cadastrar" class="btn login-btn mb-2"
-                    type="button" value="Cadastrar">
+
+                  <input (click)='cadastrar()' name="cadastrar" id="cadastrar" class="btn login-btn mb-2" type="button"
+                    value="Cadastrar">
+                  <input routerLink='/home' name="Cancelar" id="Cancelar" class="btn login-btn mb-2" type="button"
+                    value="Cancelar">
 
                 </div>
 
