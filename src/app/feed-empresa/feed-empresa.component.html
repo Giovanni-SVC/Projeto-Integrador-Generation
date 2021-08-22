@@ -34,7 +34,7 @@
       <!-- Feed -->
       <div class="col-md-6">
 
-        <div class="row d-flex justify-content-center tab-pane fade show active" id="postagensPorTema" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="row d-flex justify-content-center tab-pane fade show active" id="postagensPorTema" >
           <div class="col-md-10 " *ngFor='let tema of listaTemas'>
             <div class=" " style="width: 38rem"
               *ngFor='let item of tema.postagem | orderBy : key : reverse'>
@@ -67,7 +67,7 @@
           </div>
 
 
-          <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
             <div class="card-row">
               <div class="card text-center" style="width: 38rem;"
                 *ngFor='let item of user.postagem | orderBy : key : reverse'>

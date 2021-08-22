@@ -56,7 +56,7 @@ export class FeedEmpresaComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
-    this.findByCategoriaTema()
+    // this.findByCategoriaTema()
   }
 
   getAllTemas(){

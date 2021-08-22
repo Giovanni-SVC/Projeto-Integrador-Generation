@@ -34,6 +34,11 @@
               <p class="login-card-description">Cadastre-se como empresa</p>
               <form>
                 <div class="form-group">
+                  <label for="foto" class="sr-only">Link da Foto</label>
+                  <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto"
+                    placeholder="Link da sua foto">
+                </div>
+                <div class="form-group">
                   <label for="Nome" class="sr-only">Nome da empresa</label>
                   <input [(ngModel)]='user.nomeCompleto' type="Nome" name="Nome" id="Nome" class="form-control"
                     placeholder="Empresa">
@@ -46,6 +51,11 @@
                 <div class="form-group">
                   <label for="Cnpj" class="sr-only">CNPJ</label>
                   <input type="Cnpj" name="Nome" id="Cnpj" class="form-control" placeholder="CNPJ">
+                </div>
+                <div class="form-group">
+                  <label for="data" class="sr-only">Data de Nascimento</label>
+                  <input [(ngModel)]='user.dataNascimento' type="date" name="dataNascimento" id="dataNascimento"
+                    class="form-control" placeholder="Data de Nascimento">
                 </div>
                 <div class="form-group">
                   <label for="CEP" class="sr-only">CEP</label>
@@ -66,7 +76,7 @@
                     class="form-control" placeholder="Confirme sua senha">
                 </div>
                 <div class="row d-flex justify-content-center">
-                  <input routerLink='/info' name="Cadastrar" id="Cadastrar" class="btn ml-4 login-btn mb-2"
+                  <input (click)='cadastrar()' name="Cadastrar" id="Cadastrar" class="btn ml-4 login-btn mb-2"
                     type="button" value="Cadastrar">
                   <input routerLink='/home' name="Cancelar" id="Cancelar" class="btn ml-4 login-btn mb-2" type="button"
                     value="Cancelar">
