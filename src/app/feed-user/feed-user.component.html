@@ -63,9 +63,11 @@
                       <small class="card-text">Tema: {{item.tema.descricao}}</small>
                       <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
                               {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-                      <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                      <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
-                  </div>
+                      <div class="row d-flex">
+                      <button class='btn-editar' [routerLink]="['/postagem-edit', item.id]"  href="">Editar</button>
+                      <button class='btn-apagar' [routerLink]="['/postagem-delete', item.id]" href="">Apagar</button>
+                      </div>
+                    </div>
               </div>
         </div>
         <!-- Minhas postagens -->
