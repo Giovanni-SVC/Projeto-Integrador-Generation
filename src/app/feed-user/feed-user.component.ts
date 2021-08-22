@@ -20,6 +20,7 @@ export class FeedUserComponent implements OnInit {
   listaPostagens: Postagem[]
   tituloPost: string
   conteudo: string
+  anexo: number
   
 
   listaTemas: Tema[]
@@ -28,6 +29,7 @@ export class FeedUserComponent implements OnInit {
   categoria: string
   palavraChave: string
   palavraR: Postagem
+  
 
   user: User = new User()
   idUser = environment.id
@@ -47,9 +49,8 @@ export class FeedUserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this.anexo = this.idUser
     window.scroll(0,0)
-
     // if(environment.token == ''){
     // this.alertas.showAlertInfo('Faça o login')
     //  this.router.navigate(['/home'])
@@ -63,6 +64,7 @@ export class FeedUserComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
+    this.findByCategoriaTema()
   }
 
   getAllTemas(){
@@ -92,6 +94,7 @@ export class FeedUserComponent implements OnInit {
   publicar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
+    this.postagem.anexo = this.idUser 
 
     this.user.id = this.idUser
     this.postagem.usuario = this.user
@@ -107,7 +110,6 @@ export class FeedUserComponent implements OnInit {
   }
 
   findByTituloPostagem(){
-
     if(this.tituloPost == ''){
       this.getAllPostagens()
       }else{
@@ -129,7 +131,7 @@ export class FeedUserComponent implements OnInit {
   }
 
   findByCategoriaTema(){
-
+    this.categoria = 'Vagas'
     if(this.categoria == ''){
       this.getAllTemas()
       }else{

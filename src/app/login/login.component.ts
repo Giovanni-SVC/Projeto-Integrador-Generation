@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/feed-empresa'])
       }
     }, erro=>{
-      if(erro.status == 500){
+      if(erro.status == 401){
         this.alerta.showAlertDanger('usuario ou senha estão incorretos!')
       }
     })

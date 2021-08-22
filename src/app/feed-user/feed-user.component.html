@@ -30,7 +30,7 @@
             <input type="text" class="from-control" id="tituloPost" placeholder="Digite o nome do titulo da postagem"
               [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
           </div>
-
+          
           <!-- pesquisa por conteudo -->
 
           <div class="form-group">
@@ -71,7 +71,7 @@
                     <p class="card-text"><small class="text-muted">Publicado por: {{item.usuario.nomeCompleto}}</small>
                     </p>
                     <button class="btn-candidatar" data-toggle="modal" href=''
-                      data-target="#Cadindatar-se">Candidatar-se</button>
+                      data-target="#Cadindatar-se" >Candidatar-se</button>
                 </div>
               </div>
             </div>
@@ -114,25 +114,23 @@
               <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
                 placeholder="{{tema.categoria}}">
             </div>
-
-            <div class="form-group">
-              <label for="anexo">Anexo</label>
+            <!-- <div class="form-group">
+              <label for="anexo">Código de Usuário</label>
               <input [(ngModel)]='postagem.anexo' type="text" class="form-control" id="anexo"
-                placeholder="Digite: {{idUser}}">
-            </div>
-
+                placeholder="Digite: {{idUser}}" >
+            </div> -->
             <div class="form-group">
               <label for="conteudo">Sobre você</label>
               <textarea [(ngModel)]='postagem.conteudo' name="texto" id="conteudo" class="form-control"
                 rows="3"></textarea>
             </div>
-
             <div class="form-group">
-              <label for="tema">Escolha um tema ou
-                <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:</label>
+              <label for="tema">Escolha o tipo da publicação
+                <!-- <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>: -->
+                </label>
               <select  name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                 <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                  {{item.descricao}}</option>
+                  {{item.categoria}}</option>
 
               </select>
             </div>
