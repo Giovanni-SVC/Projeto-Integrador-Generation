@@ -1,31 +1,25 @@
-<html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Atualize seu currículo</title>
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 </head>
 
 <body>
-  <main class="d-flex align-items-center min-vh-100">
+  <main class="d-flex align-items-center">
     <div class="container">
-      <div class="card login-card mt-4 mb-4">
-        <div class="row no-gutters">
+        <div class="row d-flex justify-content-center no-gutters">
 
-          <div class="col-md-6">
+          <div class="col-md-8">
 
 
             <div class="row d-flex justify-content-center mt-4">
 
             </div>
             <div class="card-body">
-              <div class="brand-wrapper">
-                <img src="../../assets/img/APRESEAtivo 2.png" alt="logo" class="logo">
-              </div>
+
               <p class="login-card-description">Atualize os dados do seu currículo</p>
               <form>
                 <!-- <div class="form-group">
@@ -45,7 +39,8 @@
                 </div>
                 <div class="form-group">
                   <label for="endereco" class="sr-only">Endereço</label>
-                  <input [(ngModel)]='user.endereco' type="text" name="endereco" id="endereco" class="form-control" placeholder="Endereço*">
+                  <input [(ngModel)]='user.endereco' type="text" name="endereco" id="endereco" class="form-control"
+                    placeholder="Endereço*">
                 </div>
 
 
@@ -101,35 +96,18 @@
                     class="form-control" placeholder="Confirme sua senha">
                 </div>
 
-                <div class="row d-flex justify-content-center">
-
-                    <input routerLink='/feed-user' name="Cancelar" id="Cancelar" class="btn login-btn mb-2"
-                      type="button" value="Cancelar">
-
-                  <input (click)='atualizar()' name="atualizar" id="atualizar" class="btn login-btn mb-2"
-                    type="button" value="Atualizar">
+                <div class="d-flex justify-content-center mb-5">
+                  <button type="submit" class="btn btn-secondary  mr-2 mb-5" routerLink='/feed-user'>Cancelar</button>
+                  <button type="submit" class="btn login-btn mr-2 mb-5" (click)='atualizar()'>Atualizar</button>
 
                 </div>
 
               </form>
-              <nav class="login-card-footer-nav mt-12">
 
-                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
-                <label class="form-check-label" for="termosDeUso">
-                  <a data-bs-toggle="modal" data-bs-target="#termosDeUso" data-toggle="modal" data-target="#termosDeUso"
-                    data-toggle="modal" href="#">Li e Concordo com os Termos de Uso.</a>
-                </label>
-
-              </nav>
             </div>
           </div>
-          <div class="col-md-6">
-            <img
-              src="https://images.pexels.com/photos/3786760/pexels-photo-3786760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="login" class="login-card-img">
-          </div>
+
         </div>
-      </div>
 
     </div>
 
@@ -139,6 +117,3 @@
   </main>
 
 </body>
-
-
-</html>
