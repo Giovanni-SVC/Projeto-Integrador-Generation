@@ -30,6 +30,8 @@ import { SobreComponent } from './sobre/sobre.component';
 import { FeedUserComponent } from './feed-user/feed-user.component';
 import { ViewCurriculoComponent } from './view-curriculo/view-curriculo.component';
 import { FeedEmpresaComponent } from './feed-empresa/feed-empresa.component';
+import { MinhasVagasComponent } from './minhas-vagas/minhas-vagas.component';
+import { MinhasCandidaturasComponent } from './minhas-candidaturas/minhas-candidaturas.component';
 
 
 
@@ -56,7 +58,9 @@ import { FeedEmpresaComponent } from './feed-empresa/feed-empresa.component';
     SobreComponent,
     FeedUserComponent,
     ViewCurriculoComponent,
-    FeedEmpresaComponent
+    FeedEmpresaComponent,
+    MinhasVagasComponent,
+    MinhasCandidaturasComponent
 
   ],
   imports: [

@@ -17,6 +17,8 @@ import { SobreComponent } from './sobre/sobre.component';
 import { FeedUserComponent } from './feed-user/feed-user.component';
 import { ViewCurriculoComponent } from './view-curriculo/view-curriculo.component';
 import { FeedEmpresaComponent } from './feed-empresa/feed-empresa.component';
+import { MinhasVagasComponent } from './minhas-vagas/minhas-vagas.component';
+import { MinhasCandidaturasComponent } from './minhas-candidaturas/minhas-candidaturas.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch: 'full'},
@@ -39,7 +41,9 @@ const routes: Routes = [
   {path: 'user-edit/:id', component: UserEditComponent},
   {path: 'feed-user', component: FeedUserComponent},
   {path: 'feed-empresa', component: FeedEmpresaComponent},
-  {path: 'view-curriculo/:id', component: ViewCurriculoComponent}
+  {path: 'view-curriculo/:id', component: ViewCurriculoComponent},
+  {path: 'minhas-vagas', component: MinhasVagasComponent},
+  {path: 'minhas-candidaturas', component: MinhasCandidaturasComponent}
 
 ];
 

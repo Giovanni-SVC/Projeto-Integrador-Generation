@@ -20,9 +20,9 @@
                       feed</a>
                   </li>
                   <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
-                  <li><a (click)='findByIdUser()' id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens"
-                      role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">Minhas
-                      postagens</a></li>
+                  <li><a [routerLink]="['/minhas-candidaturas']" (click)='findByIdUser()' id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens"
+                      >Minhas
+                      Candidaturas</a></li>
                   <li><a [routerLink]="['/curriculo', idUser]">Editar Curriculo</a></li>
                   <li><a [routerLink]="['/view-curriculo', idUser]">Visualizar Curriculo</a></li>
                 </ul>
@@ -56,7 +56,7 @@
         </div>
         <!-- End Menu lateral -->
         <!-- Feed -->
-        <div class="col-md-8 tab-content mt-5" id="nav-tabContent">
+        <div class="col-md-8 tab-content mt-4" id="nav-tabContent">
           <!-- Minhas postagens -->
           <div class="col-md-10 tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
             <div class="card mt-2 pt-2  pb-0 px-3" *ngFor='let item of user.postagem | orderBy : key : reverse'>
