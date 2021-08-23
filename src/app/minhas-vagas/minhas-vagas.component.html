@@ -46,9 +46,9 @@
                   <small class="card-text">Tema: {{item.tema.descricao}}</small>
                   <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
                       {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-                  <div class="row d-flex">
-                    <button class="col-md-6" [routerLink]="['/postagem-edit', item.id]" href="">Editar</button>
-                    <button class="col-md-6" [routerLink]="['/postagem-delete', item.id]" href="">Apagar</button>
+                  <div class="row d-flex justify-content-center">
+                    <button class="col-md-6 btn-editar" [routerLink]="['/postagem-edit', item.id]" href="">Editar</button>
+                    <button class="col-md-6 btn-apagar" [routerLink]="['/postagem-delete', item.id]" href="">Apagar</button>
                   </div>
                 </div>
               </div>

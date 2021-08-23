@@ -3,12 +3,12 @@ body {
     background: #DBEDF4;
     margin-top: 0;
   }
-  
+
   .profile-nav,
   .profile-info {
     margin-top: 30px;
   }
-  
+
   .profile-nav .user-heading {
     background: #fff;
     color: #fff;
@@ -17,49 +17,49 @@ body {
     padding: 30px;
     text-align: center;
   }
-  
+
   .profile-nav .user-heading.round a {
     border-radius: 50%;
     border-radius: 50%;
     border: 10px solid rgba(255, 255, 255, 0.3);
     display: inline-block;
   }
-  
+
   .profile-nav .user-heading a img {
     width: 112px;
     height: 112px;
     border-radius: 50%;
     border-radius: 50%;
   }
-  
+
   .profile-nav .user-heading h1 {
     font-size: 22px;
     font-weight: 300;
     margin-bottom: 5px;
   }
-  
+
   .nome{
   color: #000;
   }
-  
+
   .profile-nav .user-heading p {
     font-size: 12px;
   }
-  
+
   .profile-nav ul {
     display: flex;
     flex-direction: column;
     margin-top: 1px;
     list-style: none;
   }
-  
+
   .profile-nav ul li {
     border-bottom: 1px solid #ebeae6;
     margin-top: 0;
     line-height: 30px;
-  
+
   }
-  
+
   .profile-nav ul li a {
     border-radius: 0;
     border-radius: 0;
@@ -67,7 +67,7 @@ body {
     border-left: 5px solid #fff;
     width: 100%;
   }
-  
+
   .profile-nav ul li a:hover,
   .profile-nav ul li.active a {
     background: #f8f7f5 !important;
@@ -75,30 +75,30 @@ body {
     color: #89817f !important;
     width: 100%;
   }
-  
+
   .profile-nav ul li a i {
     font-size: 16px;
     padding-right: 10px;
     color: #bcb3aa;
   }
-  
+
   .page-inner {
     padding-top: 30px;
   }
-  
+
   .form-control{
   color: #919aa3
   }
-  
+
   /*feed*/
-  
+
   .page-inner {
     position: relative;
     min-height: calc(100% - 56px);
     padding: 20px 30px 40px 30px;
     background: #f3f4f7;
   }
-  
+
   .card.card-white {
     background-color: #fff;
     border: 1px solid transparent;
@@ -106,16 +106,16 @@ body {
     box-shadow: 0 0.05rem 0.01rem rgba(75, 75, 90, 0.075);
     padding: 25px;
   }
-  
+
   .grid-margin {
     margin-bottom: 2rem;
   }
-  
+
   .profile-timeline ul li .timeline-item-header {
     width: 100%;
     overflow: hidden;
   }
-  
+
   .profile-timeline ul li .timeline-item-header img {
     width: 40px;
     height: 40px;
@@ -123,38 +123,38 @@ body {
     margin-right: 10px;
     border-radius: 50%;
   }
-  
+
   .profile-timeline ul li .timeline-item-header p {
     margin: 0;
     color: #000;
     font-weight: 500;
   }
-  
+
   .profile-timeline ul li .timeline-item-header p span {
     margin: 0;
     color: #8e8e8e;
     font-weight: normal;
   }
-  
+
   .profile-timeline ul li .timeline-item-header small {
     margin: 0;
     color: #8e8e8e;
   }
-  
+
   .profile-timeline ul li .timeline-item-post {
     padding: 20px 0 0 0;
     position: relative;
   }
-  
+
   .profile-timeline ul li .timeline-item-post>img {
     width: 100%;
   }
-  
+
   .card{
   box-shadow: #000 0px 0px 3px;
   margin-bottom: 30px !important;
   }
-  
+
   .btn-candidatar{
   width: 50%;
   display: flex;
@@ -167,14 +167,14 @@ body {
   margin: 5px;
   border: none;
   }
-  
+
   .btn-candidatar:hover{
   box-shadow: #000 0px 1px 10px;
   transition: .2s ease;
   background-color: transparent;
   color: #000;
   }
-  
+
   .btn-editar{
     width: 50%;
     display: flex;
@@ -187,31 +187,30 @@ body {
     margin: 5px;
     border: none;
   }
-  
+
   .btn-editar:hover{
     box-shadow: #000 0px 1px 10px;
     transition: .2s ease;
     background-color: transparent;
     color: #000;
   }
-  
+
   .btn-apagar{
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffff;
-    background-color: #8c5c03;
+    background-color: #8c0303;
     border-radius: 50px;
     padding: 10px 20px;
     margin: 5px;
     border: none;
   }
-  
+
   .btn-apagar:hover{
     box-shadow: #000 0px 1px 10px;
     transition: .2s ease;
     background-color: transparent;
     color: #000;
   }
-  
