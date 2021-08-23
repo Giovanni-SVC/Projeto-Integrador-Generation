@@ -1,29 +1,147 @@
-<main class="contact-page">
-    <div class="container">
-        <h1 class="oleez-page-title wow fadeInUp">Entre em contato conosco</h1>
-        <div class="row">
-            <div class="col-md-6 mb-5 mb-md-0 pr-lg-5 wow fadeInLeft">
-                <div class="embed-responsive embed-responsive-1by1">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1353082312467!2d-46.68338588502216!3d-23.563583384681895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce579d45a95e2d%3A0x7608344a890bcfd0!2sR.%20C%C3%B4nego%20Eug%C3%AAnio%20Leite%2C%20623%20-%20ANDAR%202%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005414-011!5e0!3m2!1sen!2sbr!4v1628518511692!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="col-md-6 pl-lg-5 wow fadeInRight">
-                <form action="POST" class="oleez-contact-form">
-                    <div class="form-group">
-                        <input type="text" class="oleez-input" id="fullName" name="fullName" required>
-                        <label for="fullName">Nome completo</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="oleez-input" id="fullName" name="email" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea name="message" id="message" rows="10" class="oleez-textarea" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-submit">Enviar</button>
-                </form>
-            </div>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://i.imgur.com/6K1Rk0S.png">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-fixed navbar-expand-lg navbar-color">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../../assets/img/APRESEAtivo 2.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="text-white  m-3" href="#" routerLink='/home' tabindex="-1" aria-disabled="true">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white m-3"  routerLink="/sobre" tabindex="-1" aria-disabled="true">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-white m-3" href="#" routerLink='/contato' tabindex="-1" aria-disabled="true">Contato</a>
+            </li>
+          </ul>
+          <form class="d-flex align-itens-end">
+            <button class="btn-logar" routerLink='/login'>Login</button>
+          </form>
         </div>
-    </div>
-</main>
+      </div>
+    </nav>
+
+    <main class="d-flex align-items-center min-vh-100">
+      <div class="container">
+        <div class="card login-card">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <div class="card-body">
+                <p class="login-card-description">Entre em contato</p>
+                <form > 
+                  <div class="form-group"> 
+                    <label for="Nome" class="sr-only">Nome Completo</label>
+                    <input  type="name" name="nome" id="nome" class="form-control"
+                      placeholder="Nome Completo*">
+                  </div>
+                  <div class="form-group"> 
+                    <label for="Email" class="sr-only">E-mail</label>
+                    <input  type="email" name="email" id="email" class="form-control"
+                      placeholder="E-mail*">
+                  </div>
+                  <div class="textarea form-group">
+                    <textarea type="text" rows="7" name="textarea" id="textarea" class=" w-100 mb-4" 
+                      placeholder="Digite o texto aqui*"></textarea> <!-- acredito que o id desse espaço precisa ser ajustado -->
+                  </div>
+                  <div class="row d-flex justify-content-center">
+                    <input  type="button" id="Enviar" class="btn login-btn mb-2 active" role="button" aria-pressed="true" data-bs-toggle="modal" data-bs-target="#termosDeUso" data-toggle="modal" data-target="#termosDeUso"
+                    data-toggle="modal" href="#" type="reset" value="Enviar" ><!-- precisamos fazer um java script para ele pegar as informações e enviar por e-mail -->
+                    <input routerLink='/home' name="Cancelar" id="Cancelar" class="btn cancel-btn mb-2" type="button"
+                    value="Cancelar">
+                  </div>
+                  <div class="modal" id="termosDeUso" taria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-center w-100">Contato enviado com sucesso!</h5>
+                        </div>
+                        <div class="modal-body text-justify d-flex justify-content-center">
+                          <p><strong>Enviamos a sua mensagem com sucesso. Em breve entraremos em contato.</strong> <br> <br>
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- End card-body -->
+            </div>
+            <!-- End col-md-6 -->
+            <div class="col-md-6">
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1353082312467!2d-46.68338588502216!3d-23.563583384681895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce579d45a95e2d%3A0x7608344a890bcfd0!2sR.%20C%C3%B4nego%20Eug%C3%AAnio%20Leite%2C%20623%20-%20ANDAR%202%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005414-011!5e0!3m2!1sen!2sbr!4v1628518511692!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="oleez-footer ">
+      <div class="container">
+        <div class="footer-content">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="../../assets/img/APRESEAtivo 2.png" alt="oleez" class="footer-logo">
+              <p class="footer-intro-text"></p>
+              <nav class="footer-social-links">
+                <a routerLink='/home'>Home</a><!-- ajustei o caminho  -->
+              </nav>
+             <!-- tirei o vagas -->
+              <nav class="footer-social-links">
+                <a routerLink='/sobre'>Sobre nós</a><!-- ajustei o caminho  -->
+              </nav>
+              <nav class="footer-social-links">
+                <a routerLink='/contato'>Contato</a><!-- ajustei o caminho  -->
+              </nav>
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6 footer-widget-text">
+                  <h6 class="widget-title">TELEFONE</h6>
+                  <p class="widget-content">+55 (11) 1234-4567</p>
+                </div>
+                <div class="col-md-6 footer-widget-text">
+                  <h6 class="widget-title">E-MAIL</h6>
+                  <p class="widget-content">projetogamatr25@gmail.com</p>
+                </div>
+                <div class="col-md-6 footer-widget-text">
+                  <h6 class="widget-title">ENDEREÇO</h6>
+                  <p class="widget-content">Rua Cônego Eugênio Leite, 623 <br> Brasil, São Paulo</p>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-text d-flex justify-content-center">
+          <p class="mb-md-0">© Projeto Gama - Todos os direitos reservados.</p>
+        </div>
+      </div>
+      </footer>
+
+  </body>
+</html>
+

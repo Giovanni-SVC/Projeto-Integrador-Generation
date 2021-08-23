@@ -1,15 +1,25 @@
+body{
+  background-color: #DBEDF4;
+    background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+    
 
+}
+.btn-logar{
+  color: #ffff;
+  background-color: #03658C;
+  border: none;
+}
 p{
+  font-size: 15pt;
   text-align: center !important;
   text-align: justify !important;
 }
-
 .social-network li {
   list-style: none;
-
-
 }
-
 .social-network .fa{
   margin-top: 20px;
   font-size: 35pt;
@@ -17,17 +27,13 @@ p{
   padding: 10px;
   margin-left: 12px;
 
-
 }
-
-
 .icones{
   align-self: center;
   margin: 0;
   text-align: center;
 
 }
-
 .texto-rodape{
   color: #000000;
   justify-content: center;

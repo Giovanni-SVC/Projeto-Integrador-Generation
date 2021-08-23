@@ -1,3 +1,12 @@
+body{
+  background-color: #DBEDF4;
+    background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+    
+
+}
 li a:hover{
   text-decoration: none !important;
   list-style: none;
@@ -25,7 +34,7 @@ li a:hover{
 }
 
 .carousel{
-  background-color: #ffffff;
+  background-color: hsla(0, 0%, 100%, 0);
 }
 .carousel h4{
   color: #000;
@@ -34,7 +43,6 @@ li a:hover{
   width: 100vh !important;
 
 }
-
 .container .categoria-lista{
   text-align: center !important;
   display: flex !important;
@@ -42,7 +50,6 @@ li a:hover{
   margin: 10px;
   justify-content: space-evenly;
 }
-
 .categoria-lista ul li{
   text-decoration: none !important;
 }

@@ -1,11 +1,10 @@
 <!-- inicio -->
-
+<body>
 <div class="container">
   <div class="main-body">
-
     <div class="row gutters-sm">
       <div class="col-md-4 mb-3">
-        <div class="card">
+        <div class="card mt-4">
           <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
               <img src={{user.foto}} alt="Admin" class="rounded-circle" width="150">
@@ -13,7 +12,6 @@
                 <h4>{{user.nomeCompleto}}</h4>
                 <p class="text-secondary mb-1">{{user.cursos}}</p>
                 <p class="text-muted font-size-sm">{{user.endereco}}</p>
-
               </div>
             </div>
           </div>
@@ -27,17 +25,35 @@
           <div class="card h-100">
             <div class="card-body">
               <h6 class="d-flex align-items-center mb-3">Idiomas</h6>
-              <small>{{user.idiomas}}</small>
-
+              <form>
+                <div class="form-group "><!-- Barra de idioma -->
+                  <!-- <input class=" input form-control " for="form-Control"   type="text"  placeholder="Outro idioma" >  -->
+                  <h4>{{user.idiomas}}</h4>
+                  <input class="input form-control-range mt-3" type="range"  value="relative">
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="formControlRange">Inglês</label><!-- Barra de idioma -->
+                  <input type="range" class="form-control-range" id="formControlRange">
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="formControlRange">Portugês</label><!-- Barra de idioma -->
+                  <input type="range" class=" form-control-range" id="formControlRange">
+                </div>
+              </form>
+              
             </div>
           </div>
-          <!-- Barra de idioma -->
+      <!-- Barra de idioma -->
 
         </div>
 
       </div>
       <div class="col-md-8">
-        <div class="card mb-3">
+        <div class="card mb-3 mt-4">
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
@@ -120,3 +136,4 @@
 </div>
 
 <!-- end -->
+</body>
