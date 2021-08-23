@@ -56,19 +56,19 @@
       <div class="col-md-9 tab-content" id="nav-tabContent">
         <!-- Minhas postagens -->
         <div class="col-md-10 mb-5 tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-              <div class="card mt-2 pt-2  pb-0 px-3"
-                  *ngFor='let item of user.postagem | orderBy : key : reverse'>
-                  <div class="card-body">
-                      <h5 class="card-title m-0">{{item.titulo}}</h5>
-                      <small class="card-text">Tema: {{item.tema.descricao}}</small>
-                      <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
-                              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-                      <div class="row d-flex">
-                      <button class='btn-editar' [routerLink]="['/postagem-edit', item.id]"  href="">Editar</button>
-                      <button class='btn-apagar' [routerLink]="['/postagem-delete', item.id]" href="">Apagar</button>
-                      </div>
-                    </div>
+          <div class="card mt-2 pt-2  pb-0 px-3"
+            *ngFor='let item of user.postagem | orderBy : key : reverse'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <small class="card-text">Tema: {{item.tema.descricao}}</small>
+              <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
+                      {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+              <div class="row d-flex">
+                <button class='btn-editar' [routerLink]="['/postagem-edit', item.id]"  href="">Editar</button>
+                <button class='btn-apagar' [routerLink]="['/postagem-delete', item.id]" href="">Apagar</button>
               </div>
+            </div>
+          </div>
         </div>
         <!-- Minhas postagens -->
         <!-- Post Tema -->
@@ -89,6 +89,8 @@
                     </p>
                     <button class="btn-candidatar" data-toggle="modal" href=''
                       data-target="#Cadindatar-se" >Candidatar-se</button>
+                    <!-- <button class="btn-candidatar" data-toggle="modal" href=''
+                      data-target="#Informe" >Requisitos</button> -->
                 </div>
               </div>
             </div>
@@ -111,36 +113,54 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="titulo">Nome da Empresa</label>
               <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
                 placeholder="{{tema.categoria}}">
-            </div>
+            </div> -->
             <!-- <div class="form-group">
               <label for="anexo">Código de Usuário</label>
               <input [(ngModel)]='postagem.anexo' type="text" class="form-control" id="anexo"
                 placeholder="Digite: {{idUser}}" >
             </div> -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="conteudo">Sobre você</label>
               <textarea [(ngModel)]='postagem.conteudo' name="texto" id="conteudo" class="form-control"
                 rows="3"></textarea>
-            </div>
-            <div class="form-group">
+            </div> -->
+            <!-- <div class="form-group">
               <label for="tema">Escolha o tipo da publicação
-                <!-- <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>: -->
+                <a routerLink="/tema" data-dismiss="modal">cadastre um novo</a>:
                 </label>
               <select  name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                 <option *ngFor='let item of listaTemas' value="{{item.id}}">
                   {{item.categoria}}</option>
 
               </select>
-            </div>
+            </div> -->
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Enviar</button>
           </div>
         </div>
       </div>
     </div>
+
+
+     <!-- Modal de informações-->
+     <!-- <div class="modal fade" id="Informe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" *ngFor='let tema of listaTemas'>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Curriculo</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" *ngFor='let item of tema.postagem'>
+           <h4>{{item.conteudo}}</h4>
+          </div>
+        </div>
+      </div>
+    </div> -->

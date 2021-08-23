@@ -41,11 +41,13 @@ export class LoginComponent implements OnInit {
       console.log(environment.foto)
       if(environment.tipoUsuario == 'normal'){
         this.router.navigate(['/feed-user'])
-      } else{
+      } else if(environment.tipoUsuario == 'adm'){
+        this.router.navigate(['info'])
+      }else{
         this.router.navigate(['/feed-empresa'])
       }
     }, erro=>{
-      if(erro.status == 401){
+      if(erro.status == 401 || erro.status == 500 ){
         this.alerta.showAlertDanger('usuario ou senha estão incorretos!')
       }
     })

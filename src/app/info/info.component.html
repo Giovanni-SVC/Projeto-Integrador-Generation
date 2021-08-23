@@ -13,7 +13,7 @@
 
                   <div class="user-heading round">
                       <a href="#">
-                          <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                          <img src="{{foto}}" alt="">
                       </a>
                       <h1>{{nome}}</h1>
                       <p>{{tipoUsuario}}</p>
@@ -98,7 +98,8 @@
                                       <p class="card-text"><small class="text-muted">
                                               Publicado por: {{item.usuario.nomeCompleto}}
                                           </small></p>
-              
+                                          <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                                          <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
                                   </div>
                               </div>
                           </div>

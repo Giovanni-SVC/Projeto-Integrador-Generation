@@ -55,10 +55,13 @@ export class FeedUserComponent implements OnInit {
     // this.alertas.showAlertInfo('Faça o login')
     //  this.router.navigate(['/home'])
     // }
-    if(environment.tipoUsuario != 'adm' && environment.tipoUsuario != 'empr'){
+    if(environment.tipoUsuario == 'normal'){
       // if( environment.tipoUsuario !='empr')
       this.router.navigate(['/feed-user'])
-    } else{
+    } else if(environment.tipoUsuario == 'adm'){
+      this.router.navigate(['/info'])
+    } 
+    else {
       this.router.navigate(['/feed-empresa'])
     }
 
@@ -92,7 +95,7 @@ export class FeedUserComponent implements OnInit {
   }
 
   publicar(){
-    this.tema.id = this.idTema
+    this.tema.id = 10
     this.postagem.tema = this.tema
     this.postagem.anexo = this.idUser 
 

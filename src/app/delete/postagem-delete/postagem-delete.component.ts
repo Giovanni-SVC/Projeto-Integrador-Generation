@@ -49,7 +49,10 @@ export class PostagemDeleteComponent implements OnInit {
       this.alertas.showAlertSuccess('Postagem apagada com sucesso!')
       if(environment.tipoUsuario == "normal"){
         this.router.navigate(['/feed-user'])
-      }else{
+      }else if(environment.tipoUsuario == "adm"){
+        this.router.navigate(['/info'])
+      }
+      else{
         this.router.navigate(['/feed-empresa'])
       }
       

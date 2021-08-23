@@ -34,6 +34,7 @@ export class InfoComponent implements OnInit {
   idUser = environment.id
   nome = environment.nome
   tipoUsuario = environment.tipoUsuario
+  foto = environment.foto
 
   key = 'data'
   reverse = true
