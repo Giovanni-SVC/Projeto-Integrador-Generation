@@ -15,8 +15,8 @@
                   <p>{{tipoUsuario}}</p>
                 </div>
                 <ul class="nav">
-                  <li><a id="nav-postagensPorTema-tab" data-toggle="tab" href="#postagensPorTema" role="tab"
-                      aria-controls="nav-postagensPorTema" aria-selected="false">
+                  <li><a class="active" id="nav-postagensPorTema-tab" data-toggle="tab" href="#postagensPorTema" role="tab"
+                      aria-controls="nav-postagensPorTema" aria-selected="true">
                       feed</a>
                   </li>
                   <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
@@ -66,7 +66,7 @@
                 <p class="card-text mt-3">{{item.conteudo}}<small class="text-muted">
                         {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
                 <div class="row d-flex">
-                  <button class='btn-editar' [routerLink]="['/postagem-edit', item.id]"  href="">Editar</button>
+                  <!-- <button class='btn-editar' [routerLink]="['/postagem-edit', item.id]"  href="">Editar</button> -->
                   <button class='btn-apagar' [routerLink]="['/postagem-delete', item.id]" href="">Apagar</button>
                 </div>
               </div>
