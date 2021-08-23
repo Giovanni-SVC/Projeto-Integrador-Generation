@@ -27,30 +27,7 @@
                   </ul>
                 </div>
               </div>
-              <ul class="nav">
-                <!-- pesquisa por titulo -->
-                <div class="form-group espacoDigite">
-                  <input type="text" class="form-control" id="tituloPost"
-                    placeholder="Digite o titulo da postagem" [(ngModel)]='tituloPost'
-                    (keyup)='findByTituloPostagem()'>
-                </div>
-                <!-- pesquisa por conteudo -->
-                <div class="form-group espacoDigite">
-                  <input type="text" class="form-control" id="conteudo"
-                    placeholder="Digite palavras-chaves" [(ngModel)]='conteudo'
-                    (keyup)='findByConteudoPostagem()'>
-                </div>
-                <!-- pesquisa por tema -->
-                <div class="form-group espacoDigite">
-                  <input type="text" class="form-control" id="cate" placeholder="Vagas" [(ngModel)]='categoria'
-                    (keyup)='findByCategoriaTema()'>
-                </div>
-                <!-- pesquisar por palavra-chave -->
-                <!-- <div class="form-group">
-                          <input type="text" class="from-control" id="palavraChave" placeholder=""
-                              [(ngModel)]='palavraChave' (keyup)='findByPalavraChaveTema()'>
-                      </div> -->
-              </ul>
+              
             </div>
           </div>
           <!-- End Menu lateral -->
@@ -111,7 +88,7 @@
                 <select  name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
                   <option *ngFor='let item of listaTemas' value="{{item.id}}">
                     {{item.categoria}}</option>
-  
+
                 </select>
               </div> -->
             </div>
@@ -123,4 +100,4 @@
         </div>
       </div>
   </body>
-  
+
