@@ -21,7 +21,7 @@ export class MinhasCandidaturasComponent implements OnInit {
   tituloPost: string
   conteudo: string
   anexo: number
-  
+
 
   listaTemas: Tema[]
   idTema: number
@@ -29,7 +29,7 @@ export class MinhasCandidaturasComponent implements OnInit {
   categoria: string
   palavraChave: string
   palavraR: Postagem
-  
+
 
   user: User = new User()
   idUser = environment.id
@@ -60,7 +60,7 @@ export class MinhasCandidaturasComponent implements OnInit {
       this.router.navigate(['/minhas-candidaturas'])
     } else if(environment.tipoUsuario == 'adm'){
       this.router.navigate(['/info'])
-    } 
+    }
     else {
       this.router.navigate(['/feed-empresa'])
     }
@@ -97,7 +97,7 @@ export class MinhasCandidaturasComponent implements OnInit {
   publicar(){
     this.tema.id = 10
     this.postagem.tema = this.tema
-    this.postagem.anexo = this.idUser 
+    this.postagem.anexo = this.idUser
 
     this.user.id = this.idUser
     this.postagem.usuario = this.user
