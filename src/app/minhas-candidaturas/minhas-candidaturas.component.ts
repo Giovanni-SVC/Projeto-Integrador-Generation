@@ -57,7 +57,7 @@ export class MinhasCandidaturasComponent implements OnInit {
     // }
     if(environment.tipoUsuario == 'normal'){
       // if( environment.tipoUsuario !='empr')
-      this.router.navigate(['/feed-user'])
+      this.router.navigate(['/minhas-candidaturas'])
     } else if(environment.tipoUsuario == 'adm'){
       this.router.navigate(['/info'])
     } 

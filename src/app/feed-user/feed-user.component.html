@@ -20,7 +20,7 @@
                       feed</a>
                   </li>
                   <li><a [routerLink]="['/user-edit', idUser]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
-                  <li><a [routerLink]="['/minhas-candidaturas']" (click)='findByIdUser()' id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens"
+                  <li><a [routerLink]="['/minhas-candidaturas']" (click)='findByIdUser()'   href="#minhasPostagens"
                       >Minhas
                       Candidaturas</a></li>
                   <li><a [routerLink]="['/curriculo', idUser]">Editar Curriculo</a></li>
@@ -30,17 +30,17 @@
             </div>
             <ul class="nav">
               <!-- pesquisa por titulo -->
-              <div class="form-group espacoDigite">
+              <!-- <div class="form-group espacoDigite">
                 <input type="text" class="form-control" id="tituloPost"
                   placeholder="Digite o titulo da postagem" [(ngModel)]='tituloPost'
                   (keyup)='findByTituloPostagem()'>
-              </div>
+              </div> -->
               <!-- pesquisa por conteudo -->
-              <div class="form-group espacoDigite">
+              <!-- <div class="form-group espacoDigite">
                 <input type="text" class="form-control" id="conteudo"
                   placeholder="Digite palavras-chaves" [(ngModel)]='conteudo'
                   (keyup)='findByConteudoPostagem()'>
-              </div>
+              </div> -->
               <!-- pesquisa por tema -->
               <div class="form-group espacoDigite">
                 <input type="text" class="form-control" id="cate" placeholder="Vagas" [(ngModel)]='categoria'

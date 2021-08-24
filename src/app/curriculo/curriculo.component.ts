@@ -50,7 +50,7 @@ export class CurriculoComponent implements OnInit {
       this.user = resp
       console.log(this.user)
       console.log(this.tipoUsuario)
-      this.alertas.showAlertSuccess('Usuário atualizado com sucesso, faça o login novamente')
+      this.alertas.showAlertSuccess('Usuário atualizado com sucesso')
       this.router.navigate(['/feed-user'])
       })
     // }

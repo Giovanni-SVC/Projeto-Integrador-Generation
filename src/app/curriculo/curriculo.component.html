@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="email" class="sr-only">CEP</label>
+                  <label [(ngModel)]='user.cep' for="email" class="sr-only">CEP</label>
                   <input type="number" name="email" id="cep" class="form-control" placeholder="CEP*">
                 </div>
                 <div class="form-group">
@@ -50,10 +50,17 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="formacaoAcademica" class="sr-only">Formaçao Academica</label>
+                  <input [(ngModel)]='user.formacaoAcademica' type="text" name="formacaoAcademica" id="formacaoAcademica" class="form-control"
+                    placeholder="Escolaridade">
+                </div>
+
+                <div class="form-group">
                   <label for="cursos" class="sr-only">Cursos</label>
-                  <input type="text" name="cursos" id="cursos" class="form-control"
+                  <input [(ngModel)]='user.cursos' type="text" name="cursos" id="cursos" class="form-control"
                     placeholder="Tem interesse em uma área específia? Digite.">
                 </div>
+
                 <div class="form-group">
                   <label for="idiomas" class="sr-only">Idiomas</label>
                   <input [(ngModel)]='user.idiomas' type="text" name="idiomas" id="idiomas" class="form-control"
@@ -81,7 +88,7 @@
 
 
                 <div class="textarea">
-                  <textarea type="text" name="textarea" id="textarea" class="form-textarea w-100 mb-4"
+                  <textarea [(ngModel)]='user.objetivoProfissional' type="text" name="textarea" id="textarea" class="form-textarea w-100 mb-4"
                     placeholder="Digite seu objetivo profissional"></textarea>
                 </div>
 
